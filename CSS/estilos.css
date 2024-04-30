@@ -1,13 +1,12 @@
 .principal{
     margin:0 ;
-    background-image: url(../Imagenes/catkaiju.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .header {
     height: 100px;
     width: 100%;
-    position: fixed;
+    position:fixed;
     display:flex ;
     justify-content: space-between;
     align-items:center;
@@ -40,11 +39,15 @@
     margin: 0 6rem;
 }
 
+.logo{
+    height: 100%;
+}
+
 .logo img {
     border-radius: 70%;
     align-items:center;
     width: 110px; 
-    height: 110px; 
+    height: 100%; 
 }
 .sociales{
     padding: 4%;
@@ -96,4 +99,30 @@
     background: currentColor;
     right: 1px;
     top: 1px;
+}
+
+.titulo{
+    background-image: url(../Imagenes/Backgroundhome.jpg);
+    background-size: cover;
+    background-position: center;    
+    height:900px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #c7f0ec;
+}
+
+.tituloPrincipal{
+    /*-webkit-text-stroke-color: #0b554f;
+    -webkit-text-stroke-width: 1.5px;*/
+}
+
+.separadorTitulos{
+    border:none;
+    height:3px;
+    width: 400px;
+    background-color:#c7f0ec;
 }
