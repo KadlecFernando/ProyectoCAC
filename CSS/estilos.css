@@ -1,0 +1,99 @@
+.principal{
+    margin:0 ;
+    background-image: url(../Imagenes/catkaiju.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    display:flex ;
+    justify-content: space-between;
+    align-items:center;
+    background-color:rgba(242,109, 61, 100);
+    padding: 20px;
+    animation: mejora-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+
+@keyframes mejora-header {
+     from{ background:rgba(255,109, 61, 0);
+        color: black
+        } 
+    to {
+        background: rgba(242, 109, 61, 100);
+        color:white
+    }
+}
+
+.ListaCompleta {
+    display: flex;
+    list-style-type: none;
+    padding: 100px;
+    margin: 0;
+}
+
+.ListaCompleta .ElementoLista {
+    justify-content: space-between;
+    margin: 0 6rem;
+}
+
+.logo img {
+    border-radius: 70%;
+    align-items:center;
+    width: 110px; 
+    height: 110px; 
+}
+.sociales{
+    padding: 4%;
+}
+ @keyframes insta-scroll{  
+    to{ color: white;}
+ }
+
+.socialesLoa:link, :visited, :active{
+    color:black;
+    animation: insta-scroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+ }
+
+.GGinstagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.GGinstagram::after,
+.GGinstagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.GGinstagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px;
+}
+
+.GGinstagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px;
+}
