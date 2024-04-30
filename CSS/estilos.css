@@ -1,13 +1,15 @@
 body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace, sans-serif;
+    background-image: url(../Imagenes/catkaiju.jpg);
 }
 .header {
-    height: wrap;
+    height: 100px;
     width: 100%;
     position: fixed;
     display:flex ;
     justify-content: space-between;
+    align-items:center;
     background-color:rgba(242,109, 61, 100);
     padding: 20px;
     animation: mejora-header linear both;
