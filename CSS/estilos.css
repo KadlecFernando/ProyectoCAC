@@ -138,7 +138,7 @@
 
 .misTrabajos{
     /*background-color:#0896A6;*/
-    background-image: url(../Imagenes/prueba1.jpg);
+    background-image: url(../Imagenes/fondoMisTrabajos.jpg);
     background-size: cover;
     background-position: center;    
     height:1000px;
@@ -153,6 +153,10 @@
 
 .tituloTrabajos{
     margin-top: -100px;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 80px;
+    font-style: normal;
 }
 
 .carrusel{
