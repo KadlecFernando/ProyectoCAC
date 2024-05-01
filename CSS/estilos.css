@@ -10,7 +10,8 @@
     display:flex ;
     justify-content: space-between;
     align-items:center;
-    background-color:rgba(242,109, 61, 100);
+    /*background-color:rgba(242, 109, 61, 100);*/
+    background-color:rgba(7,140,127, 100);
     padding: 20px;
     animation: mejora-header linear both;
     animation-timeline: scroll(root);
@@ -18,11 +19,15 @@
 }
 
 @keyframes mejora-header {
-     from{ background:rgba(255,109, 61, 0);
+     from{
+
+        /*background:rgba(255, 109, 61, 0);*/
+        background-color:rgba(7,140,127, 0);
         color: black
         } 
     to {
-        background: rgba(242, 109, 61, 100);
+        /*background: rgba(242, 109, 61, 100);*/
+        background-color:rgba(7,140,127, 100);
         color:white
     }
 }
@@ -113,7 +118,9 @@
     align-items: center;
     font-size: 40px;
     color: #c7f0ec;
+    /*border-bottom: 30px solid rgba(8, 150, 166, 0.30);*/
 }
+
 
 .tituloPrincipal{
     /*-webkit-text-stroke-color: #0b554f;
@@ -125,4 +132,11 @@
     height:3px;
     width: 400px;
     background-color:#c7f0ec;
+}
+
+
+.misTrabajos{
+    background-color:#0896A6;
+    height: 900px;
+    width:100%;
 }
