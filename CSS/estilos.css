@@ -137,10 +137,40 @@
 
 .misTrabajos{
     /*background-color:#0896A6;*/
-    background-image: url(../Imagenes/prueba.jpg);
+    background-image: url(../Imagenes/prueba1.jpg);
     background-size: cover;
     background-position: center;    
     height:1000px;
     width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    color: #c7f0ec;
 }
 
+.tituloTrabajos{
+    margin-top: -100px;
+}
+
+.carrusel{
+    display: flex;
+    width: 1200px;
+    height: 700px;
+}
+
+.carrusel img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.carrusel img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
