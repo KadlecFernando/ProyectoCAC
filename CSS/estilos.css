@@ -110,7 +110,7 @@
     background-image: url(../Imagenes/Backgroundhome.jpg);
     background-size: cover;
     background-position: center;    
-    height:900px;
+    height:1000px;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -136,7 +136,11 @@
 
 
 .misTrabajos{
-    background-color:#0896A6;
-    height: 900px;
+    /*background-color:#0896A6;*/
+    background-image: url(../Imagenes/prueba.jpg);
+    background-size: cover;
+    background-position: center;    
+    height:1000px;
     width:100%;
 }
+
