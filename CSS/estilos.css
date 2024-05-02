@@ -185,3 +185,25 @@
     opacity: 1;
     filter: contrast(120%);
 }
+
+.artista{
+    height:1000px;
+    width:100%;
+    background-color:  rgb(243, 222, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorFoto{
+    display: flex;
+    width: 1500px;
+    height: 500px;
+    background-color: white;
+}
+
+.tiendaTurno{
+    height:1000px;
+    width:100%;
+    background-color:  #0896A6;
+}
