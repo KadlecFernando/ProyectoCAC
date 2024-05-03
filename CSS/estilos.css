@@ -20,11 +20,11 @@
 }
 
 @keyframes mejora-header {
-     from{
-        /*background:rgba(255, 109, 61, 0);*/
-        background-color:rgba(7,140,127, 0);
-        color: black
-        } 
+    from{
+       /*background:rgba(255, 109, 61, 0);*/
+       background-color:rgba(7,140,127, 0);
+       color: black
+       } 
     to {
         /*background: rgba(242, 109, 61, 100);*/
         background-color:rgba(7,140,127, 100);
@@ -61,12 +61,19 @@
     to{ color: white;}
  }
 
-.socialesLoa:link, :visited, :active{
+.socialesLoa{
     color:black;
     animation: insta-scroll linear both;
     animation-timeline: scroll(root);
     animation-range: 0 100px;
  }
+
+ /* Separados porque sin la aclaración .socialesLoa se lo aplica a todo. */
+.socialesLoa:link, 
+.socialesLoa:visited,
+.socialesloa:active{
+
+}
 
 .GGinstagram {
     box-sizing: border-box;
@@ -157,13 +164,13 @@
     color: #c7f0ec;
 }
 
-.tituloTrabajos{
+/* .tituloTrabajos{
     margin-top: -100px;
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-size: 80px;
     font-style: normal;
-}
+} */
 
 .carrusel{
     display: flex;
@@ -195,15 +202,53 @@
     align-items: center;
 }
 
-.contenedorFoto{
+.contenedorArtista{
     display: flex;
     width: 1500px;
     height: 500px;
     background-color: white;
+    justify-content: start;
+    align-items: center;
 }
 
 .tiendaTurno{
     height:1000px;
     width:100%;
     background-color:  #0896A6;
+}
+
+.contenedorArtista img{
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin-left: 80px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+.contenedorTexto{
+    height: 400px;
+    width: 950px;
+}
+
+.contenedorTexto h2{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 80px;
+    font-style: normal;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.contenedorTexto p{
+    font-size: 30px;
+    margin-top: -30px;
+    margin-left: 90px;
+    text-align:justify;
+    font-family: "Junge", cursive;
+}
+
+.copyright{
+    background-color: #F24141;
+    height: 100px;
+    width:100%;
 }
