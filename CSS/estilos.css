@@ -310,8 +310,47 @@
     font-family: "Zen Maru Gothic", serif;
 }
 
-.copyright{
+.estilosFooter{
     background-color: #F24141;
-    height: 100px;
+    height: 200px;
+    width:100%;
+    display: block;
+
+}
+
+.tituloFooter{
+    font-family: "Oooh Baby", cursive;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.elementosFooter{
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+}
+#listasFooter{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#listasFooter ul{
+    list-style-type: none;
+    padding: 0px 200px;
+    margin: 0;
+}
+
+#copyrightFooter{
+    display: flex;
+    justify-content: center;
+    height: 50px;
     width:100%;
 }
+/* Acá iría todo lo de la sección que falta */
+
