@@ -3,6 +3,8 @@
     width: 100vw;
 }
 
+/*--------------------------------------------------------- HEADER --------------------------------------------------------------*/
+
 .header {
     height: 85px;
     width: 100vw;
@@ -42,7 +44,7 @@
     font-family: "Zen Maru Gothic", serif;
     font-weight: 400;
     font-style: normal;
-  
+    cursor: pointer;
 }
 
 .ListaCompleta .ElementoLista {
@@ -55,6 +57,7 @@
     height: 100%;
     display:block;
     position: relative;
+    cursor: pointer;
 }
 
 .logo img {
@@ -167,6 +170,28 @@
     right: 1px;
     top: 1px;
 }
+
+.menu-hamburguesa {
+    width: 130px; 
+    height: 100%;
+    display:none;  
+    cursor: pointer;
+}
+.barra {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+}
+@media screen and (min-width: 481px) and (max-width: 769px){
+    .header nav {
+        display: none} 
+    .menu-hamburguesa{
+        display:block;
+    }
+}
+
+/*----------------------------------------------- PRIMERA SECCION -------------------------------------------------------------------------------------------*/
 
 .titulo{
     background-image: url(../Imagenes/BackgroundHomeDesvanece.png);
