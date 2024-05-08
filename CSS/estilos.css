@@ -1,13 +1,13 @@
 .principal{
-    margin:0 ;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin:0;
+    width: 100vw;
 }
+
 .header {
     height: 85px;
-    width: 100%;
+    width: 100vw;
     position:fixed;
-    display:flex ;
+    display:flex;
     justify-content: space-between;
     align-items:center;
     /*background-color:rgba(242, 109, 61, 100);*/
@@ -51,7 +51,7 @@
 }
 
 .logo{
-    width: 130px;
+    width: 20%;
     height: 100%;
     display:block;
     position: relative;
@@ -100,10 +100,13 @@
     }
 }
 
+.nav{
+    width: 60%;
+}
 
 .sociales{
     /* padding: 4%; */
-    width: 130px;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -238,8 +241,9 @@
 
 .carrusel{
     display: flex;
-    width: 1200px;
-    height: 700px;
+    margin-top: -60px;
+    width: 80%;
+    height: 850px;
 }
 
 .carrusel img{
@@ -270,18 +274,19 @@
 
 .contenedorArtista{
     display: grid;
-    width: 1500px;
+    width: 80%;
     height: 1500px;
     background-color: white;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
+    overflow: hidden;
 }
 
 
 #imgLoaFacheraFacherita{
     border-radius: 50%;
     height: 400px;
-    width: 400px;
+    width: 100%;
     margin-top: 80px;
     margin-left: 80px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
@@ -291,16 +296,15 @@
 
 #imgEstudio{
     height: 500px;
-    width: 400px;
+    width: 100%;
     margin-top: 30px;
-    margin-left: 50px;
     grid-column: 3;
     grid-row: 2;
 }
 
 #imgMesaTrabajo{
     height: 350px;
-    width: 450px;
+    width: 100%;
     margin-top: 80px;
     margin-left: 80px;
     grid-column: 1;
@@ -330,7 +334,7 @@
 
 .contenedorTexto{
     height: 400px;
-    width: 950px;
+    width: 180%;
 }
 
 .contenedorTexto h2{
@@ -365,7 +369,7 @@
     height: 200px;
     width:100%;
     display: block;
-
+    /* overflow: hidden; */
 }
 
 .tituloFooter{
@@ -382,18 +386,27 @@
     font-weight: 600;
     font-style: normal;
 }
+
+.contenedorListasFooter{
+    width: 100%;
+    display: flex;
+    align-items: center;  
+}
+
 #listasFooter{
     height: 150px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 15%;
 }
 
 #listasFooter ul{
     list-style-type: none;
-    padding: 0px 200px;
+    /* padding: 0px 200px; */
     margin: 0;
+    width: 33%;
 }
 
 #copyrightFooter{
@@ -402,3 +415,4 @@
     height: 50px;
     width:100%;
 }
+
