@@ -21,7 +21,7 @@
                 <img src="./Imagenes/logoNegro.png" id="logoNegro" alt="Home">
                 <img src="./Imagenes/logoBlanco.png" id="logoBlanco" alt="Home">
             </div>
-            <nav>  
+             <nav> 
                 <ul class="ListaCompleta">
                     <li class="ElementoLista">Acerca</li>
                     <li class="ElementoLista">Contacto</li>
@@ -30,11 +30,20 @@
             </nav>
             <div class="sociales"> 
                 <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a>  
-            </div>   
-            <div class="menu-hamburguesa">
-                <div class="barra"></div>
-                <div class="barra"></div>
-                <div class="barra"></div>
+            </div>  
+            <input type="checkbox" id="toggle" hidden>
+            <label for="toggle" class="menu-hamburguesa">
+                 <div class="barra"></div>
+                 <div class="barra"></div>
+                 <div class="barra"></div>
+            </label>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#">Acerca</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Tienda</a></li>
+                </ul>
+                <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a> 
             </div>
     </header>
     <main>
@@ -92,14 +101,26 @@
 
         <section class="tiendaTurno">
             <div class="contenedorTienda">
+                    <button id="tienda-btn"> Tienda</button>
                 <article class="tienda">
-
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure reprehenderit ipsa, quos ex sunt officiis suscipit placeat dolorem quo aliquid autem error repellat in enim impedit, quia, dolor esse nemo.</p>
                 </article>
             </div>
 
             <div class="contenedorTurno">
-                <article class="turno">
-
+                    <article class="turno">
+                      <h2>Agenda tu turno</h2>
+                      <form id="turno-form">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required><br><br>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required><br><br>
+                        <label for="fecha">Fecha preferida:</label>
+                        <input type="date" id="fecha" name="fecha" required><br><br>
+                        <button type="submit">Agendar</button>
+                      </form>
+                    </article>
+                  </div>
                 </article>
             </div>
         </section>
@@ -128,7 +149,7 @@
         <div id="copyrightFooter">
             <p>©2024 Loaloa Tattoo | All Rights Reserved | Website by Grupo13CAC</p>
         </div>
-        
+
     </footer>
     
 </body>
