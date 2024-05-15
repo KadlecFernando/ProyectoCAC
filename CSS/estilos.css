@@ -246,6 +246,7 @@
         display: none;
     }
 }
+/* No se donde poner esto */
 
 /*----------------------------------------------- PRIMERA SECCION -------------------------------------------------------------------------------------------*/
 
@@ -437,11 +438,50 @@
 
 /*-----------------------------------------TIENDA Y CONTACTO-----------------------------------------*/
 
-.tiendaTurno{
-    height:1000px;
-    width:100%;
-    background-color:  #0896A6;
+.tiendaTurno {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 500px; 
+    padding: 0 20px; 
+    background-color: lightblue;
 }
+
+.contenedorTienda,
+.contenedorTurno {
+    width: 45%; 
+    text-align: left; 
+}
+
+.contenedorTurno {
+    text-align: right; }
+.turno {
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+}
+
+.turno h2 {
+    margin-top: 0;
+  }
+  button {
+    width: 60px;
+    height: 60px;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #bba004;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+button:hover {
+    background-color: #0056b3;
+  }
 
 /*-----------------------------------------------FOOTER----------------------------------------------*/
 
