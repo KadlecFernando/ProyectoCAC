@@ -429,7 +429,7 @@
 }
 
 .contenedorTexto p{
-    font-size: 30px;
+    font-size: 2rem;
     margin-left: 90px;
     text-align:justify;
     font-family: "Zen Maru Gothic", serif;
@@ -440,30 +440,46 @@
 
 .tiendaTurno {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
     height: 500px; 
-    padding: 0 20px; 
-    background-color: lightblue;
+    width: 100%;
 }
 
 .contenedorTienda,
 .contenedorTurno {
-    width: 45%; 
-    text-align: left; 
+    width: 50%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.contenedorTurno {
-    text-align: right; }
-.turno {
+.turno ,.tienda{
+    width: 70%;
+    height: 50%;
     padding: 20px; 
-    background-color: #f9f9f9; 
-    border-radius: 10px; 
-}
+    border-radius: 10px;                                                                            
+}                                                                                                     
 
+.contenedorTienda{
+    background-color: white;
+}
+.tienda {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;  
+}
+#botonLimon{
+    width: 80%;
+    height: 100%;
+}
+.contenedorTurno {
+    text-align: right;
+    background-color:lightblue }
+.turno{
+        background-color:white;
+    }
 .turno h2 {
     margin-top: 0;
-  }
+}
   button {
     width: 60px;
     height: 60px;
