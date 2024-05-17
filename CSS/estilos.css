@@ -246,7 +246,7 @@
         display: none;
     }
 }
-/* No se donde poner esto */
+
 
 /*----------------------------------------------- PRIMERA SECCION -------------------------------------------------------------------------------------------*/
 
@@ -457,19 +457,39 @@
 
 .contenedorTienda,
 .contenedorTurno {
-    width: 45%; 
-    text-align: left; 
+    width: 50%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedorTurno {
     text-align: right; }
-.turno {
-    padding: 20px; 
-    background-color: #f9f9f9; 
-    border-radius: 10px;
-    overflow: hidden; 
-}
 
+.turno ,.tienda {
+    width: 70%;
+    height: 50%;
+    padding: 20px;
+}
+.contenedorTienda{
+    background-color: white;
+}
+.tienda {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;  
+}
+#botonLimon{
+    width: 80%;
+    height: 100%;
+}
+.contenedorTurno {
+    text-align: right;
+    background-color:lightblue }
+.turno{
+        background-color:white;
+    }
 .turno h2 {
     margin-top: 0;
   }
