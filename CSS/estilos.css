@@ -450,8 +450,9 @@
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    height: 500px; 
-    padding: 0 20px; 
+    height: 600px; 
+    width: 100%;
+    /* padding: 0 20px;  */
     background-color: lightblue;
 }
 
@@ -465,52 +466,75 @@
 }
 
 .contenedorTurno {
-    text-align: right; }
+    /* text-align: right;  */
+}
+
 
 .turno ,.tienda {
     width: 70%;
-    height: 50%;
+    height: 60%;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contenedorTienda{
     background-color: white;
 }
+
 .tienda {
     background-color: lightblue;
-    display: flex;
-    justify-content: center;  
 }
+
 #botonLimon{
     width: 80%;
+    height: 80%;
+    margin-left: 8%;
+}
+
+.contenedorTurno {
+    /* text-align: right; */
+    background-color:lightblue 
+}
+
+.turno h2 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: clamp(2em, 1vw, 5em);
+    font-family: "Cutive Mono", monospace; 
+}
+
+.turno{
+    background-color:white;
+    display: flex;
+    /* flex-direction: column; */
+    font-family: "Zen Maru Gothic", serif;
+    font-size: calc(0.5vw + .7em);
+}
+
+#turno-form{
     height: 100%;
 }
-.contenedorTurno {
-    text-align: right;
-    background-color:lightblue }
-.turno{
-        background-color:white;
-    }
-.turno h2 {
-    margin-top: 0;
-  }
-  button {
-    width: 60px;
-    height: 60px;
+
+.turno button {
+    /* width: 20%;
+    height: 45%; */
     padding: 10px 20px;
-    font-size: 12px;
-    line-height: 60px;
+    font-size: 20px;
+    /* line-height: 100%; */
     text-align: center;
     cursor: pointer;
     border: none;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-color: #bba004;
     color: #fff;
     transition: background-color 0.3s ease;
-  }
+    margin-left: 80%;
+}
   
 button:hover {
     background-color: #0056b3;
-  }
+}
 
 /*-----------------------------------------------FOOTER----------------------------------------------*/
 
