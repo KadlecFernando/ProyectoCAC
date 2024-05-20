@@ -281,6 +281,11 @@
         height: 600px;
     }
 }
+@media (width < 1440px) and (height<700px){
+    .titulo{ 
+        height: 500px;
+    }
+}
 
 .tituloPrincipal{
     /*-webkit-text-stroke-color: #0b554f;
