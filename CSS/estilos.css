@@ -50,6 +50,14 @@
     justify-content: space-between;
     margin: 0 6rem;
 }
+.ListaCompleta a {
+    text-decoration: none;
+    color: inherit;
+ }
+ .ListaCompleta .ElementoLista :hover{
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+  }
 .submenu {
     position: absolute;
     top: 100%; 
