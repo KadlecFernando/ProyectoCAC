@@ -343,6 +343,11 @@
         height:800px;
     }
 }
+@media (width < 1440px) and (height<700px){
+    .misTrabajos{
+        height:600px;
+    }
+}
 
 .carrusel{
     display: flex;
