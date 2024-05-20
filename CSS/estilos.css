@@ -276,8 +276,16 @@
     /* border-bottom: 30px solid rgba(8, 150, 166, 0.30); */
 }
 
+@media (width < 1440px){
+    .titulo{ 
+        height: 600px;
+    }
+}
 
-
+@media (width < 680px) {
+    .titulo{ height: 750px;
+    }
+}
 .tituloPrincipal{
     /*-webkit-text-stroke-color: #0b554f;
     -webkit-text-stroke-width: 1.5px;*/
