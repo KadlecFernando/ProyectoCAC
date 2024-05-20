@@ -470,25 +470,25 @@
 @media (width<900px){
     .contenedorTexto{
         height: auto;
-        width: 96%;
-        margin-left: 2%;
-        margin-right: 2%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     #imgMesaTrabajo{
-        width: 96%;
+        width: 90%;
         margin-top: 0px;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     #imgLoaFacheraFacherita{
         margin-top: 40px;
         margin-left: 10%;
     }
     #imgEstudio{
-        width: 96%;
+        width: 90%;
         margin-top: 0px;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     
 }
