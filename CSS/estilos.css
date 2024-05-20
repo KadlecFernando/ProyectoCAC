@@ -321,6 +321,17 @@
     font-style: normal;
 } */
 
+@media (width<700px) {
+    .misTrabajos{
+        height:800px;
+    }
+
+    .carrusel{
+        width: 100%;
+    }
+    
+}
+
 .carrusel{
     display: flex;
     width: 80%;
