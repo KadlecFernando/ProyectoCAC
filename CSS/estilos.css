@@ -234,7 +234,7 @@
     margin: 2px;
     border-radius: 9999px;
 }
-@media (width < 769px){
+@media (width < 900px){
     .header nav {
         display: none} 
     .menu-hamburguesa{
@@ -346,8 +346,10 @@
 /*-------------------------------------------ARTISTA-----------------------------------------*/
 
 .artista{
-    height:1700px;
+    height:auto;
     width:100%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
     background-color:  rgb(243, 222, 168);
     display: flex;
     justify-content: center;
@@ -385,7 +387,7 @@
 }
 
 #imgEstudio{
-    height: 100%;
+    height: auto;
     width: 100%;
     margin-top: 30px;
     grid-column: 3;
@@ -393,7 +395,7 @@
 }
 
 #imgMesaTrabajo{
-    height: 350px;
+    height: auto;
     width: 100%;
     margin-top: 80px;
     margin-left: 80px;
@@ -437,7 +439,7 @@
 }
 
 .contenedorTexto p{
-    font-size: calc(1.2vw + .7em);
+    font-size: calc(1vw + .7em);
     margin-left: 90px;
     text-align:justify;
     font-family: "Zen Maru Gothic", serif;
