@@ -282,10 +282,6 @@
     }
 }
 
-@media (width < 680px) {
-    .titulo{ height: 750px;
-    }
-}
 .tituloPrincipal{
     /*-webkit-text-stroke-color: #0b554f;
     -webkit-text-stroke-width: 1.5px;*/
