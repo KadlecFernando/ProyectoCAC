@@ -325,17 +325,19 @@
     .misTrabajos{
         height:800px;
     }
-
-    .carrusel{
-        width: 100%;
-    }
-    
 }
 
 .carrusel{
     display: flex;
     width: 80%;
     height: 85%;
+}
+
+@media (width<700px) {
+    .carrusel{
+        width: 100%;
+    }
+    
 }
 
 
