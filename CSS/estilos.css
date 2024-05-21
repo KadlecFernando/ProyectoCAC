@@ -751,22 +751,3 @@ button:hover {
     width:100%;
     font-size: calc(1vw + .3em);
 }
-
-.DeLoa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-    height: 100vh;
-    background-color:  rgb(243, 222, 168);
-}
-.parrafo1{
-  margin: 5%;
-  width: 80%;
-}
-#imgLoaFachera2{ 
-    width: 500px;
-    height: 500px%;
-    object-fit: cover;
-    border-radius: 10px;
-}
