@@ -357,11 +357,28 @@
 
 @media (width<700px) {
     .carrusel{
-        width: 100%;
+        display: none;
     }
     
 }
 
+@media (width<700px) {
+    .slider{
+        height: 80%;
+        width: 60%;
+        position:relative;
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+     }
+     .slider img{
+        width: 100%;
+        left: 0;
+        position: sticky;
+        object-fit: cover;
+        scroll-snap-align: center;
+    }
+}
 
 .carrusel img{
     width: 0px;
@@ -376,6 +393,14 @@
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
+}
+@media (width>700px){
+.slider{
+    display: none;
+}
+.slider img{
+    display: none;
+}
 }
 
 /*-------------------------------------------ARTISTA-----------------------------------------*/
