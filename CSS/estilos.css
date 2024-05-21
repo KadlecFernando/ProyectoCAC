@@ -602,6 +602,12 @@
     /* padding: 0 20px;  */
     background-color: lightblue;
 }
+@media (width<900px) {
+    .tiendaTurno{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+}
 
 .contenedorTienda,
 .contenedorTurno {
@@ -610,6 +616,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (width<900px){
+    .contenedorTienda{
+        width: 100%;
+    }
+    .contenedorTurno{
+        width: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .tienda{
+        margin-top: 5%;
+        margin-bottom: 5%;;
+    }
 }
 
 .contenedorTurno {
