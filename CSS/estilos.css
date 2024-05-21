@@ -365,7 +365,7 @@
 @media (width<700px) {
     .slider{
         height: 80%;
-        width: 60%;
+        width: 90%;
         position:relative;
         display: flex;
         overflow: scroll;
