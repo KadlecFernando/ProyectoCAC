@@ -340,7 +340,7 @@
 
 @media (width<700px) {
     .misTrabajos{
-        height:800px;
+        height:auto;
     }
 }
 @media (width < 1440px) and (height<700px){
@@ -362,10 +362,10 @@
     
 }
 
-@media (width<700px) {
+/*@media (width<700px) {
     .slider{
         height: 80%;
-        width: 90%;
+        width: 80%;
         position:relative;
         display: flex;
         overflow: scroll;
@@ -377,6 +377,24 @@
         position: sticky;
         object-fit: cover;
         scroll-snap-align: center;
+    }
+}*/
+
+@media (width<700px) {
+    .slider{
+        height: 80%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+     }
+     .slider img{
+        width: 100px;
+        height: 200px;
+        flex-basis: 100px;
+        flex-grow: 1;
     }
 }
 
