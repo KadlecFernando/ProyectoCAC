@@ -331,6 +331,28 @@
     color: #ffffff;
 }
 
+.flecha{
+    position: relative;
+    width: 5%;
+    height: 14%;
+    cursor: pointer;
+}
+
+#flechaImagen{
+    width: 100%;
+    animation: rebote 1s infinite ease-in-out;
+}
+
+@keyframes rebote {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px); /* Ajusta la altura del rebote */
+    }
+}
+
+
 /*--------------------------------------------MIS TRABAJOS----------------------------------------*/
 .misTrabajos{
     /* background-color:#0896A6; */
