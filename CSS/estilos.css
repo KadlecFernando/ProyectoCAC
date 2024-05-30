@@ -303,9 +303,10 @@ html{
         height: 600px;
     }
 }
-@media (width < 1440px) and (height<700px){
+
+@media (width < 1440px) and (height < 700px){
     .titulo{ 
-        height: 500px;
+        height: 800px;
     }
 }
 
@@ -387,9 +388,10 @@ html{
         height:auto;
     }
 }
+
 @media (width > 1440px){
     .misTrabajos{
-        height:900px;
+        height:1000px;
     }
 }
 
@@ -468,7 +470,7 @@ html{
 /*-------------------------------------------ARTISTA-----------------------------------------*/
 
 .artista{
-    height:auto;
+    height:500px;
     width:100%;
     padding-top: 3.5%;
     padding-bottom: 3.5%;
@@ -479,13 +481,20 @@ html{
 }
 
 .contenedorArtista{
-    display: grid;
+    display: flex;
     width: 80%;
-    height: 90%;
+    height: 80%;
     background-color: white;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
     overflow: hidden;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    margin: 3rem auto;
+    border-radius: 8rem;
+    background-image: url("../Imagenes/loaBanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content:left;
+    align-items: center;
 }
 
 @media (width<900px){
@@ -508,109 +517,21 @@ html{
 }
 
 
-
-
-#imgLoaFacheraFacherita{
-    border-radius: 50%;
-    height: 80%;
-    width: 80%;
-    margin-top: 80px;
-    margin-left: 80px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#imgEstudio{
-    height: auto;
-    width: 100%;
-    margin-top: 30px;
-    grid-column: 3;
-    grid-row: 2;
-}
-
-#imgMesaTrabajo{
-    height: auto;
-    width: 100%;
-    margin-top: 80px;
-    margin-left: 80px;
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#textoLoaFacheraFacherita{
-    margin-top: 50px;
-    grid-row: 1;
-    grid-column: 2/3;
-}
-
-#textoLoaFacheraFacherita p{
-    margin-top: -30px;
-}
-
-#textoEstudio{
-    grid-row: 2;
-    grid-column: 1/2;
-}
-
-#textoMesaTrabajo{
-    grid-row: 3;
-    grid-column: 2/3;
-}
-
-
-.contenedorTexto{
-    height: 400px;
-    width: 180%;
-}
-
 @media (width<900px){
-    .contenedorTexto{
-        height: auto;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #imgMesaTrabajo{
-        width: 90%;
-        margin-top: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #imgLoaFacheraFacherita{
-        margin-top: 40px;
-        margin-left: 10%;
-    }
-    #imgEstudio{
-        width: 90%;
-        margin-top: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    
+
 }
 
-.contenedorTexto h2{
+.artista h2{
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
-    font-size: clamp(2em, 5vw, 5em);
+    font-size: clamp(2em, 7vw, 7em);
     font-style: normal;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 5%;
+    margin-left: 15%;
 }
 
-.contenedorTexto p{
-    font-size: calc(1vw + .7em);
-    margin-left: 90px;
-    text-align:justify;
-    font-family: "Zen Maru Gothic", serif;
-    margin-top: 100px;
-}
+
 @media (width<900px){
-    .contenedorTexto p{
-        margin-left: 1px; 
-        margin-top: 20px;  
-    }
     .contenedorTexto h2{
         text-align: center;
         margin-left: 0px;
