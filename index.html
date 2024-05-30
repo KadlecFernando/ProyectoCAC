@@ -6,7 +6,6 @@
     <title>Tienda Loa</title>
     <link rel="stylesheet" href="./CSS/estilos.css">
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
@@ -18,14 +17,20 @@
 <body class="principal">
     <header class="header">
             <div class="logo">
-                <img src="./Imagenes/logoNegro.png" id="logoNegro" alt="Home">
-                <img src="./Imagenes/logoBlanco.png" id="logoBlanco" alt="Home">
+                <a href="index.html">
+                    <img src="./Imagenes/logoNegro.png" id="logoNegro" alt="Home">
+                </a> 
+                <a href="index.html">
+                    <img src="./Imagenes/logoBlanco.png" id="logoBlanco" alt="Home">
+                </a>
             </div>
              <nav> 
                 <ul class="ListaCompleta">
-                    <li class="ElementoLista">Acerca</li>
-                    <li class="ElementoLista">Contacto</li>
-                    <li class="ElementoLista">Tienda</li>
+                    <li class="ElementoLista"><a href="Acerca.html">Acerca</a></li>
+                  
+                    <li class="ElementoLista">  <a href="Contacto.html">Contacto</a></li>
+                    
+                    <li class="ElementoLista"><a href="Tienda.html">Tienda</a></li>
                 </ul>
             </nav>
             <div class="sociales"> 
@@ -37,13 +42,14 @@
                  <div class="barra"></div>
                  <div class="barra"></div>
             </label>
-            <div class="submenu">
+            <div id="submenu" class="submenu">
                 <ul>
-                    <li><a href="#">Acerca</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Tienda</a></li>
+                    <li><a href="/Acerca.html">Acerca</a></li>
+                    <li><a href="/Contacto.html">Contacto</a></li>
+                    <li><a href="/Tienda.html">Tienda</a></li>
                 </ul>
                 <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a> 
+                <script src="./JS/logica.js"></script>
             </div>
     </header>
     <main>
@@ -71,6 +77,16 @@
                 <img src="./Imagenes/tattoo5.jpeg" alt="">
                 <img src="./Imagenes/tattoo7.jpg" alt="">
             </div>
+            <div class="slider">
+                <img src="./Imagenes/tattoo6.jpg" alt="">
+                <img src="./Imagenes/tattoo1.jpeg" alt="">
+                <img src="./Imagenes/tattoo2.jpeg" alt="">
+                <img src="./Imagenes/tattoo3.jpeg" alt="">
+                <img src="./Imagenes/tattoo4.jpeg" alt="">
+                <img src="./Imagenes/tattoo5.jpeg" alt="">
+                <img src="./Imagenes/tattoo7.jpg" alt="">
+                <img src="./Imagenes/tattoo2.jpeg" alt="">
+            </div>
         </section>
 
         <section class="artista">
@@ -87,13 +103,13 @@
                 <img id ="imgEstudio" src="./Imagenes/estudio.jpg" alt="">
                 <div id="textoEstudio" class="contenedorTexto">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, laborum!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas eaque harum incidunt facilis odit esse porro dolorem, ut fugit vitae at veritatis itaque perferendis minima voluptatem aliquam, sint unde hic ullam nobis quam atque corporis. Eius sint eum molestiae iste magni debitis fuga commodi nobis enim architecto, cumque excepturi provident.
                     </p>
                 </div>
                 <img id ="imgMesaTrabajo" src="./Imagenes/mesaTrabajo.jpg" alt="">
                 <div id="textoMesaTrabajo" class="contenedorTexto">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, laborum!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem laborum quae aut laboriosam nisi molestias maxime doloribus sunt, omnis animi odio aspernatur expedita ab fuga voluptatum, totam perferendis? Enim, natus. Obcaecati debitis voluptas, velit modi reprehenderit sed fugit tempora numquam sit magnam nam. Perferendis impedit excepturi perspiciatis iusto officiis ipsum.
                     </p>
                 </div>
             </article>
@@ -102,7 +118,7 @@
         <section class="tiendaTurno">
             <div class="contenedorTienda">    
                 <article class="tienda">
-                    <a href="#"><img id="botonLimon" src="/Imagenes/LimoncioCash.png" alt=""></a>
+                    <a href="Tienda.html"><img id="botonLimon" src="./Imagenes/LimoncioCash.png" alt=""></a>
                     <!-- <button id="tienda-btn"> Tienda</button>  CTRL + K + C = Win.--> 
                 </article>
             </div>
