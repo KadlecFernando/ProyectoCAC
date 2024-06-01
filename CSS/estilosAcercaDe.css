@@ -47,6 +47,7 @@
 }
 
 .ListaCompleta .ElementoLista {
+    transition: transform 0.2s ease, text-decoration 0.2s ease;
     justify-content: space-between;
     margin: 0 6rem;
 }
@@ -54,10 +55,9 @@
     text-decoration: none;
     color: inherit;
  }
- .ListaCompleta .ElementoLista :hover{
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 10%;
-  }
+  .ListaCompleta .ElementoLista:hover{
+    transform: scale(1.2);
+   }
 .submenu {
     position: absolute;
     top: 100%; 
