@@ -1,0 +1,500 @@
+.principal{
+    margin:0;
+    width: 100%;
+}
+
+/*--------------------------------------------------------- HEADER --------------------------------------------------------------*/
+
+.header {
+    height: 85px;
+    width: 100vw;
+    position:fixed;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /*background-color:rgba(242, 109, 61, 100);*/
+    background-color:rgba(7,140,127, 100);
+    animation: mejora-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+    z-index: 9999;
+}
+
+@keyframes mejora-header {
+    from{
+       /*background:rgba(255, 109, 61, 0);*/
+       background-color:rgba(7,140,127, 0);
+       color: black
+       } 
+    to {
+        /*background: rgba(242, 109, 61, 100);*/
+        background-color:rgba(7,140,127, 100);
+        color:white
+    }
+}
+
+
+.ListaCompleta {
+    display: flex;
+    list-style-type: none;
+    padding: 100px;
+    margin: 0;
+    font-size: 30px;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.ListaCompleta .ElementoLista {
+    justify-content: space-between;
+    margin: 0 6rem;
+}
+.ListaCompleta a {
+    text-decoration: none;
+    color: inherit;
+ }
+ .ListaCompleta .ElementoLista :hover{
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+  }
+.submenu {
+    position: absolute;
+    top: 100%; 
+    right: 2px;
+    width: 25%;
+    background-color: rgba(14, 180, 166, 0.0); 
+    z-index: 999; 
+    display: none;
+    font-family: "Zen Maru Gothic", serif;
+    font-style: normal;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
+    animation: submenuScroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+@keyframes submenuScroll{
+    from{box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2) }
+    to{background-color:rgba(7,140,127, 0.9);
+        box-shadow:0px 0px 0px rgba(0, 0, 0, 0.0);
+    }
+}
+
+.submenu ul {
+    list-style-type: none;
+    margin: 2%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.submenu li {
+    padding: 5%;
+    margin: 3% 10%;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #000; 
+    font-size: 18px; 
+    font-family: "Zen Maru Gothic", serif;
+    font-style: normal;
+    animation: submenua linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+
+}
+@keyframes submenua{
+    from{ color: black}
+    to{ color:white}
+}
+.submenu .socialesLoa{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 10px 10px;
+}
+#toggle:checked ~ .header .submenu {
+    display: block;
+}
+
+#toggle {
+    display: none;
+}
+#toggle:checked ~ .submenu {
+    display: block;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.logo img {
+    margin-left:10%;
+    width: 130px; 
+    height: 100%;
+    position: absolute;
+}
+
+#logoBlanco{
+    z-index: 0;
+    animation: transicion-logoBlanco linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+
+#logoNegro{
+    z-index: 1;
+    animation: transicion-logoNegro linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+
+@keyframes transicion-logoNegro {
+    from{
+        /* z-index: 1; */
+        opacity: 1;
+       } 
+    to {
+        /* z-index: 0; */
+        opacity: 0;
+    }
+}
+
+@keyframes transicion-logoBlanco {
+    from{
+        /* z-index: 0; */
+        opacity: 0;
+       } 
+    to {
+        /* z-index: 1; */
+        opacity: 1;
+    }
+}
+
+.nav{
+    width: 60%;
+}
+
+.sociales{
+    /* padding: 4%; */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ @keyframes insta-scroll{  
+    to{ color: white;}
+ }
+
+.socialesLoa{
+    color:black;
+    animation: insta-scroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+ }
+
+ /* Separados porque sin la aclaración .socialesLoa se lo aplica a todo. */
+.socialesLoa:link, 
+.socialesLoa:visited,
+.socialesloa:active{
+
+}
+
+.GGinstagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.GGinstagram::after,
+.GGinstagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.GGinstagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px;
+}
+
+.GGinstagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px;
+}
+
+.menu-hamburguesa {
+    width: 18%; 
+    height: 100%;
+    display:none;  
+    cursor: pointer;
+}
+
+.barra {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 2px;
+    border-radius: 9999px;
+}
+@media (width < 900px){
+    .header nav {
+        display: none} 
+    .menu-hamburguesa{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;}
+    .sociales{
+        display: none;
+    }
+}
+
+/*-----------------------------------------------MAIN----------------------------------------------*/
+
+.artista{
+    height:auto;
+    width:100%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    background-color:  rgb(243, 222, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorArtista{
+    display: grid;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+@media (width<900px){
+    .contenedorArtista{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media (width<700px){
+    .artista{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        }
+    .contenedorArtista{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+
+
+#imgLoaFacheraFacherita{
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    margin-top: 80px;
+    margin-left: 80px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#imgEstudio{
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#imgMesaTrabajo{
+    height: auto;
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 80px;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#textoLoaFacheraFacherita{
+    margin-top: 50px;
+    grid-row: 1;
+    grid-column: 2/3;
+}
+
+#textoLoaFacheraFacherita p{
+    margin-top: -30px;
+}
+
+#textoEstudio{
+    grid-row: 2;
+    grid-column: 1/2;
+}
+
+#textoMesaTrabajo{
+    grid-row: 3;
+    grid-column: 2/3;
+}
+
+
+.contenedorTexto{
+    height: 400px;
+    width: 180%;
+}
+
+@media (width<900px){
+    .contenedorTexto{
+        height: auto;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #imgMesaTrabajo{
+        width: 90%;
+        margin-top: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #imgLoaFacheraFacherita{
+        margin-top: 40px;
+        margin-left: 10%;
+    }
+    #imgEstudio{
+        width: 90%;
+        margin-top: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+}
+
+.contenedorTexto h2{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: clamp(2em, 5vw, 5em);
+    font-style: normal;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.contenedorTexto p{
+    font-size: calc(1vw + .7em);
+    margin-left: 90px;
+    text-align:justify;
+    font-family: "Zen Maru Gothic", serif;
+    margin-top: 100px;
+}
+@media (width<900px){
+    .contenedorTexto p{
+        margin-left: 1px; 
+        margin-top: 20px;  
+    }
+    .contenedorTexto h2{
+        text-align: center;
+        margin-left: 0px;
+    }
+}
+
+
+
+/*-----------------------------------------------FOOTER----------------------------------------------*/
+
+.estilosFooter{
+    background-color: #F24141;
+    height: 200px;
+    width:100%;
+    display: block;
+    /* overflow: hidden; */
+}
+
+.tituloFooter{
+    font-family: "Oooh Baby", cursive;
+    font-size: clamp(1em, 2vw, 2em);
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.elementoFooter{
+    font-family: "Zen Maru Gothic", serif;
+    font-size: calc(.7vw + .3em);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.contenedorListasFooter{
+    width: 100%;
+    display: flex;
+    align-items: center;  
+}
+
+#listasFooter{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+}
+@media (width<800px){
+    
+    #listasFooter{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: -5%;
+        overflow: hidden;
+    }
+}
+
+#listasFooter ul{
+    list-style-type: none;
+    /* padding: 0px 200px; */
+    margin: 0;
+    width: 33%;
+}
+
+#copyrightFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width:100%;
+    font-size: calc(1vw + .3em);
+}
+

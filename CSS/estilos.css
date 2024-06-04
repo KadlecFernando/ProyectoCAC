@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .principal{
     margin:0;
     width: 100%;
@@ -63,11 +67,21 @@
     top: 100%; 
     right: 2px;
     width: 25%;
-    background-color: rgba(14, 180, 166, 0.8); 
+    background-color: rgba(14, 180, 166, 0.0); 
     z-index: 999; 
     display: none;
     font-family: "Zen Maru Gothic", serif;
     font-style: normal;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
+    animation: submenuScroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+@keyframes submenuScroll{
+    from{box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2) }
+    to{background-color:rgba(7,140,127, 0.9);
+        box-shadow:0px 0px 0px rgba(0, 0, 0, 0.0);
+    }
 }
 
 .submenu ul {
@@ -78,6 +92,7 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    
 }
 
 .submenu li {
@@ -91,7 +106,14 @@
     font-size: 18px; 
     font-family: "Zen Maru Gothic", serif;
     font-style: normal;
+    animation: submenua linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
 
+}
+@keyframes submenua{
+    from{ color: black}
+    to{ color:white}
 }
 .submenu .socialesLoa{
     display:flex;
@@ -282,10 +304,12 @@
     }
 }
 
-@media (width < 680px) {
-    .titulo{ height: 750px;
+@media (width < 1440px) and (height < 700px){
+    .titulo{ 
+        height: 800px;
     }
 }
+
 .tituloPrincipal{
     /*-webkit-text-stroke-color: #0b554f;
     -webkit-text-stroke-width: 1.5px;*/
@@ -312,14 +336,37 @@
     color: #ffffff;
 }
 
+.flecha{
+    position: relative;
+    width: 5%;
+    height: 14%;
+    cursor: pointer;
+}
+
+#flechaImagen{
+    width: 100%;
+    animation: rebote 1s infinite ease-in-out;
+}
+
+@keyframes rebote {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px); /* Ajusta la altura del rebote */
+    }
+}
+
+
 /*--------------------------------------------MIS TRABAJOS----------------------------------------*/
+
 .misTrabajos{
     /* background-color:#0896A6; */
     background-color:rgb(241, 151, 91);
     /* background-image: url(../Imagenes/fondoMisTrabajos.jpg); */
     background-size: cover;
     background-position: center;    
-    height:900px;
+    height:600px;
     width:100%;
     display:flex;
     justify-content: center;
@@ -328,6 +375,8 @@
     font-size: 40px;
     color: #c7f0ec;
 }
+
+
 
 /* .tituloTrabajos{
     margin-top: -100px;
@@ -339,9 +388,16 @@
 
 @media (width<700px) {
     .misTrabajos{
-        height:800px;
+        height:auto;
     }
 }
+
+@media (width > 1440px){
+    .misTrabajos{
+        height:1000px;
+    }
+}
+
 
 .carrusel{
     display: flex;
@@ -351,11 +407,46 @@
 
 @media (width<700px) {
     .carrusel{
-        width: 100%;
+        display: none;
     }
     
 }
 
+/*@media (width<700px) {
+    .slider{
+        height: 80%;
+        width: 80%;
+        position:relative;
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+     }
+     .slider img{
+        width: 100%;
+        left: 0;
+        position: sticky;
+        object-fit: cover;
+        scroll-snap-align: center;
+    }
+}*/
+
+@media (width<700px) {
+    .slider{
+        height: 80%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+     }
+     .slider img{
+        width: 130px;
+        height: 240px;
+        flex-basis: 100px;
+        flex-grow: 1;
+    }
+}
 
 .carrusel img{
     width: 0px;
@@ -371,29 +462,139 @@
     opacity: 1;
     filter: contrast(120%);
 }
+@media (width>700px){
+.slider{
+    display: none;
+}
+.slider img{
+    display: none;
+}
+}
+
+/*---------------------------------TRANSICION( + DATA)--------------------------------------*/
+.transicionGaleriaArtista{
+    height: 800px;
+    width: 100%;
+    background-color: rgb(241, 151, 91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background-image: url(/Imagenes/fondoBanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Zen Maru Gothic", serif;
+    font-size: clamp(0.5em, 1vw, 1em);
+    text-align: justify;
+}
+
+.divProductos{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.divProductos img{
+    height: 35%;
+    width: 50%;
+}
+
+.divRespuesta{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divRespuesta img{
+    height: 35%;
+    width: 50%;
+}
+
+.divOnda{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.divOnda img{
+    height: 35%;
+    width: 50%;
+}
+
+@media (width<900px){
+    .transicionGaleriaArtista{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media (width<700px){
+    .transicionGaleriaArtista{
+        width: 100%;
+        height: 100%;
+    }
+
+}
 
 /*-------------------------------------------ARTISTA-----------------------------------------*/
 
 .artista{
-    height:auto;
+    height:500px;
     width:100%;
     padding-top: 3.5%;
     padding-bottom: 3.5%;
-    background-color:  rgb(243, 222, 168);
+    background-color: rgb(248, 236, 210);
+    /* rgb(243, 222, 168); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contenedorArtista{
-    display: grid;
+.articleArtista{
     width: 80%;
-    height: 90%;
-    background-color: white;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-    overflow: hidden;
+    height: 80%;
+    margin: 3rem auto;
 }
+
+.enlace{
+    text-decoration: none;
+    color:inherit;
+}
+
+.contenedorArtista{
+    display:block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 8rem;
+    background-image: url("../Imagenes/loaBanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content:left;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contenedorArtista:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
 
 @media (width<900px){
     .contenedorArtista{
@@ -415,99 +616,29 @@
 }
 
 
-
-
-#imgLoaFacheraFacherita{
-    border-radius: 50%;
-    height: 80%;
-    width: 80%;
-    margin-top: 80px;
-    margin-left: 80px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#imgEstudio{
-    height: auto;
-    width: 100%;
-    margin-top: 30px;
-    grid-column: 3;
-    grid-row: 2;
-}
-
-#imgMesaTrabajo{
-    height: auto;
-    width: 100%;
-    margin-top: 80px;
-    margin-left: 80px;
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#textoLoaFacheraFacherita{
-    margin-top: 50px;
-    grid-row: 1;
-    grid-column: 2/3;
-}
-
-#textoLoaFacheraFacherita p{
-    margin-top: -30px;
-}
-
-#textoEstudio{
-    grid-row: 2;
-    grid-column: 1/2;
-}
-
-#textoMesaTrabajo{
-    grid-row: 3;
-    grid-column: 2/3;
-}
-
-
-.contenedorTexto{
-    height: 400px;
-    width: 180%;
-}
-
 @media (width<900px){
-    .contenedorTexto{
-        height: auto;
-        width: 100%;
-    }
-    #imgMesaTrabajo{
-        margin-top: 0px;
-        margin-left: 0px;
-    }
-    #imgLoaFacheraFacherita{
-        margin-top: 40px;
-        margin-left: 10%;
-    }
-    
+
 }
 
-.contenedorTexto h2{
+.artista h2{
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
-    font-size: clamp(2em, 5vw, 5em);
+    font-size: clamp(2em, 7vw, 7em);
     font-style: normal;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 7%;
+    margin-left: 15%;
+    color: white;
 }
 
-.contenedorTexto p{
-    font-size: calc(1vw + .7em);
-    margin-left: 90px;
-    text-align:justify;
-    font-family: "Zen Maru Gothic", serif;
-    margin-top: 100px;
+.artista h3{
+    font-size: clamp(1em, 1.5vw, 1.5em);
+    color: white;
+    margin-left: 16%;
+    margin-top: -6%;
 }
+
+
 @media (width<900px){
-    .contenedorTexto p{
-        margin-left: 1px; 
-        margin-top: 20px;  
-    }
     .contenedorTexto h2{
         text-align: center;
         margin-left: 0px;
@@ -525,6 +656,12 @@
     /* padding: 0 20px;  */
     background-color: lightblue;
 }
+@media (width<900px) {
+    .tiendaTurno{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+}
 
 .contenedorTienda,
 .contenedorTurno {
@@ -533,6 +670,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (width<900px){
+    .contenedorTienda{
+        width: 100%;
+    }
+    .contenedorTurno{
+        width: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .tienda{
+        margin-top: 5%;
+        margin-bottom: 5%;;
+    }
 }
 
 .contenedorTurno {
@@ -654,7 +806,7 @@ button:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: 0;
+        margin-left: -5%;
         overflow: hidden;
     }
 }
@@ -674,4 +826,3 @@ button:hover {
     width:100%;
     font-size: calc(1vw + .3em);
 }
-

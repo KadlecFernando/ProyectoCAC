@@ -1,0 +1,369 @@
+.principal{
+    margin:0;
+    width: 100%;
+}
+
+/*--------------------------------------------------------- HEADER --------------------------------------------------------------*/
+
+.header {
+    height: 85px;
+    width: 100vw;
+    position:fixed;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /*background-color:rgba(242, 109, 61, 100);*/
+    background-color:rgba(7,140,127, 100);
+    animation: mejora-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+    z-index: 9999;
+}
+
+@keyframes mejora-header {
+    from{
+       /*background:rgba(255, 109, 61, 0);*/
+       background-color:rgba(7,140,127, 0);
+       color: black
+       } 
+    to {
+        /*background: rgba(242, 109, 61, 100);*/
+        background-color:rgba(7,140,127, 100);
+        color:white
+    }
+}
+
+
+.ListaCompleta {
+    display: flex;
+    list-style-type: none;
+    padding: 100px;
+    margin: 0;
+    font-size: 30px;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.ListaCompleta .ElementoLista {
+    justify-content: space-between;
+    margin: 0 6rem;
+}
+.ListaCompleta a {
+    text-decoration: none;
+    color: inherit;
+ }
+ .ListaCompleta .ElementoLista :hover{
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+  }
+.submenu {
+    position: absolute;
+    top: 100%; 
+    right: 2px;
+    width: 25%;
+    background-color: rgba(14, 180, 166, 0.0); 
+    z-index: 999; 
+    display: none;
+    font-family: "Zen Maru Gothic", serif;
+    font-style: normal;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
+    animation: submenuScroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+@keyframes submenuScroll{
+    from{box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2) }
+    to{background-color:rgba(7,140,127, 0.9);
+        box-shadow:0px 0px 0px rgba(0, 0, 0, 0.0);
+    }
+}
+
+.submenu ul {
+    list-style-type: none;
+    margin: 2%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.submenu li {
+    padding: 5%;
+    margin: 3% 10%;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #000; 
+    font-size: 18px; 
+    font-family: "Zen Maru Gothic", serif;
+    font-style: normal;
+    animation: submenua linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+
+}
+@keyframes submenua{
+    from{ color: black}
+    to{ color:white}
+}
+.submenu .socialesLoa{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 10px 10px;
+}
+#toggle:checked ~ .header .submenu {
+    display: block;
+}
+
+#toggle {
+    display: none;
+}
+#toggle:checked ~ .submenu {
+    display: block;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.logo img {
+    margin-left:10%;
+    width: 130px; 
+    height: 100%;
+    position: absolute;
+}
+
+#logoBlanco{
+    z-index: 0;
+    animation: transicion-logoBlanco linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+
+#logoNegro{
+    z-index: 1;
+    animation: transicion-logoNegro linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+
+@keyframes transicion-logoNegro {
+    from{
+        /* z-index: 1; */
+        opacity: 1;
+       } 
+    to {
+        /* z-index: 0; */
+        opacity: 0;
+    }
+}
+
+@keyframes transicion-logoBlanco {
+    from{
+        /* z-index: 0; */
+        opacity: 0;
+       } 
+    to {
+        /* z-index: 1; */
+        opacity: 1;
+    }
+}
+
+.nav{
+    width: 60%;
+}
+
+.sociales{
+    /* padding: 4%; */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ @keyframes insta-scroll{  
+    to{ color: white;}
+ }
+
+.socialesLoa{
+    color:black;
+    animation: insta-scroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+ }
+
+ /* Separados porque sin la aclaración .socialesLoa se lo aplica a todo. */
+.socialesLoa:link, 
+.socialesLoa:visited,
+.socialesloa:active{
+
+}
+
+.GGinstagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.GGinstagram::after,
+.GGinstagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.GGinstagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px;
+}
+
+.GGinstagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px;
+}
+
+.menu-hamburguesa {
+    width: 18%; 
+    height: 100%;
+    display:none;  
+    cursor: pointer;
+}
+
+.barra {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 2px;
+    border-radius: 9999px;
+}
+@media (width < 900px){
+    .header nav {
+        display: none} 
+    .menu-hamburguesa{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;}
+    .sociales{
+        display: none;
+    }
+}
+
+/*-----------------------------------------------MAIN----------------------------------------------*/
+
+.trabajandoando{
+    width: 90%;
+    height: 80%;
+}
+.titulo{
+    background-image: url(../Imagenes/BackgroundHomeDesvanece.png);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(253, 190, 165, 0.5)), url(../Imagenes/BackgroundHome.jpg); */
+    background-size: cover;
+    /* background-position: center;    */
+    height: 900px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-position: bottom; /*Esto hace que la imagen haga el cover anclando abajo*/
+    /* background-color:rgb(248, 232, 177); */
+    background-color:rgb(241, 151, 91);
+    /* border-bottom: 30px solid rgba(8, 150, 166, 0.30); */
+}
+
+
+
+/*-----------------------------------------------FOOTER----------------------------------------------*/
+
+.estilosFooter{
+    background-color: #F24141;
+    height: 200px;
+    width:100%;
+    display: block;
+    /* overflow: hidden; */
+}
+
+.tituloFooter{
+    font-family: "Oooh Baby", cursive;
+    font-size: clamp(1em, 2vw, 2em);
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.elementoFooter{
+    font-family: "Zen Maru Gothic", serif;
+    font-size: calc(.7vw + .3em);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.contenedorListasFooter{
+    width: 100%;
+    display: flex;
+    align-items: center;  
+}
+
+#listasFooter{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+}
+@media (width<800px){
+    
+    #listasFooter{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: -5%;
+        overflow: hidden;
+    }
+}
+
+#listasFooter ul{
+    list-style-type: none;
+    /* padding: 0px 200px; */
+    margin: 0;
+    width: 33%;
+}
+
+#copyrightFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width:100%;
+    font-size: calc(1vw + .3em);
+}
+
