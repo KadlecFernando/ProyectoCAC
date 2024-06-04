@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .principal{
     margin:0;
     width: 100%;
@@ -293,7 +297,7 @@
     /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(253, 190, 165, 0.5)), url(../Imagenes/BackgroundHome.jpg); */
     background-size: cover;
     /* background-position: center;    */
-    height:750px;
+    height:900px;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -311,9 +315,10 @@
         height: 600px;
     }
 }
-@media (width < 1440px) and (height<700px){
+
+@media (width < 1440px) and (height < 700px){
     .titulo{ 
-        height: 500px;
+        height: 800px;
     }
 }
 
@@ -343,7 +348,30 @@
     color: #ffffff;
 }
 
+.flecha{
+    position: relative;
+    width: 5%;
+    height: 14%;
+    cursor: pointer;
+}
+
+#flechaImagen{
+    width: 100%;
+    animation: rebote 1s infinite ease-in-out;
+}
+
+@keyframes rebote {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px); /* Ajusta la altura del rebote */
+    }
+}
+
+
 /*--------------------------------------------MIS TRABAJOS----------------------------------------*/
+
 .misTrabajos{
     /* background-color:#0896A6; */
     background-color:rgb(241, 151, 91);
@@ -360,6 +388,8 @@
     color: #c7f0ec;
 }
 
+
+
 /* .tituloTrabajos{
     margin-top: -100px;
     font-family: "Caveat", cursive;
@@ -373,11 +403,13 @@
         height:auto;
     }
 }
+
 @media (width > 1440px){
     .misTrabajos{
-        height:900px;
+        height:1000px;
     }
 }
+
 
 .carrusel{
     display: flex;
@@ -451,28 +483,130 @@
 }
 }
 
+/*---------------------------------TRANSICION( + DATA)--------------------------------------*/
+.transicionGaleriaArtista{
+    height: 800px;
+    width: 100%;
+    background-color: rgb(241, 151, 91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background-image: url(/Imagenes/fondoBanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Zen Maru Gothic", serif;
+    font-size: clamp(0.5em, 1vw, 1em);
+    text-align: justify;
+}
+
+.divProductos{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.divProductos img{
+    height: 35%;
+    width: 50%;
+}
+
+.divRespuesta{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divRespuesta img{
+    height: 35%;
+    width: 50%;
+}
+
+.divOnda{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.divOnda img{
+    height: 35%;
+    width: 50%;
+}
+
+@media (width<900px){
+    .transicionGaleriaArtista{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media (width<700px){
+    .transicionGaleriaArtista{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
 /*-------------------------------------------ARTISTA-----------------------------------------*/
 
 .artista{
-    height:auto;
+    height:500px;
     width:100%;
     padding-top: 3.5%;
     padding-bottom: 3.5%;
-    background-color:  rgb(243, 222, 168);
+    background-color: rgb(248, 236, 210);
+    /* rgb(243, 222, 168); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contenedorArtista{
-    display: grid;
+.articleArtista{
     width: 80%;
-    height: 90%;
-    background-color: white;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-    overflow: hidden;
+    height: 80%;
+    margin: 3rem auto;
 }
+
+.enlace{
+    text-decoration: none;
+    color:inherit;
+}
+
+.contenedorArtista{
+    display:block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 8rem;
+    background-image: url("../Imagenes/loaBanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content:left;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contenedorArtista:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
 
 @media (width<900px){
     .contenedorArtista{
@@ -494,109 +628,29 @@
 }
 
 
-
-
-#imgLoaFacheraFacherita{
-    border-radius: 50%;
-    height: 80%;
-    width: 80%;
-    margin-top: 80px;
-    margin-left: 80px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#imgEstudio{
-    height: auto;
-    width: 100%;
-    margin-top: 30px;
-    grid-column: 3;
-    grid-row: 2;
-}
-
-#imgMesaTrabajo{
-    height: auto;
-    width: 100%;
-    margin-top: 80px;
-    margin-left: 80px;
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#textoLoaFacheraFacherita{
-    margin-top: 50px;
-    grid-row: 1;
-    grid-column: 2/3;
-}
-
-#textoLoaFacheraFacherita p{
-    margin-top: -30px;
-}
-
-#textoEstudio{
-    grid-row: 2;
-    grid-column: 1/2;
-}
-
-#textoMesaTrabajo{
-    grid-row: 3;
-    grid-column: 2/3;
-}
-
-
-.contenedorTexto{
-    height: 400px;
-    width: 180%;
-}
-
 @media (width<900px){
-    .contenedorTexto{
-        height: auto;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #imgMesaTrabajo{
-        width: 90%;
-        margin-top: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #imgLoaFacheraFacherita{
-        margin-top: 40px;
-        margin-left: 10%;
-    }
-    #imgEstudio{
-        width: 90%;
-        margin-top: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    
+
 }
 
-.contenedorTexto h2{
+.artista h2{
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
-    font-size: clamp(2em, 5vw, 5em);
+    font-size: clamp(2em, 7vw, 7em);
     font-style: normal;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 7%;
+    margin-left: 15%;
+    color: white;
 }
 
-.contenedorTexto p{
-    font-size: calc(1vw + .7em);
-    margin-left: 90px;
-    text-align:justify;
-    font-family: "Zen Maru Gothic", serif;
-    margin-top: 100px;
+.artista h3{
+    font-size: clamp(1em, 1.5vw, 1.5em);
+    color: white;
+    margin-left: 16%;
+    margin-top: -6%;
 }
+
+
 @media (width<900px){
-    .contenedorTexto p{
-        margin-left: 1px; 
-        margin-top: 20px;  
-    }
     .contenedorTexto h2{
         text-align: center;
         margin-left: 0px;
