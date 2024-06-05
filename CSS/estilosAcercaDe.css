@@ -311,106 +311,9 @@
     margin-bottom: 50px;
 }
 
-@media (width<900px){
-    .contenedorArtista{
-        display: flex;
-        flex-direction: column;
-    }
-
-}
-@media (width<700px){
-    .artista{
-        padding-top: 0px;
-        padding-bottom: 0px;
-        }
-    .contenedorArtista{
-        width: 100%;
-        height: 100%;
-    }
-
-}
-
-
-
-
-#imgLoaFacheraFacherita{
-    border-radius: 50%;
-    height: 80%;
-    width: 80%;
-    margin-top: 80px;
-    margin-left: 80px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#imgEstudio{
-    height: auto;
-    width: 100%;
-    margin-top: 30px;
-    grid-column: 3;
-    grid-row: 2;
-}
-
-#imgMesaTrabajo{
-    height: auto;
-    width: 100%;
-    margin-top: 80px;
-    margin-left: 80px;
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#textoLoaFacheraFacherita{
-    margin-top: 50px;
-    grid-row: 1;
-    grid-column: 2/3;
-}
-
-#textoLoaFacheraFacherita p{
-    margin-top: -30px;
-}
-
-#textoEstudio{
-    grid-row: 2;
-    grid-column: 1/2;
-}
-
-#textoMesaTrabajo{
-    grid-row: 3;
-    grid-column: 2/3;
-}
-
-
 .contenedorTexto{
     height: 400px;
     width: 180%;
-}
-
-@media (width<900px){
-    .contenedorTexto{
-        height: auto;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #imgMesaTrabajo{
-        width: 90%;
-        margin-top: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    #imgLoaFacheraFacherita{
-        margin-top: 40px;
-        margin-left: 10%;
-    }
-    #imgEstudio{
-        width: 90%;
-        margin-top: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    
 }
 
 .contenedorTexto h2{
@@ -429,15 +332,216 @@
     font-family: "Zen Maru Gothic", serif;
     margin-top: 100px;
 }
+
+.contenedorTexto p span {
+    /* font-weight: bold; */
+    font-size: clamp(1em, 1.8vw, 2em);;
+}
+
+
+#imgLoaFacheraFacherita{
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    margin-top: 80px;
+    margin-left: 80px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#imgEstudio{
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -10%;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#imgMesaTrabajo{
+    height: auto;
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 80px;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#textoLoaFacheraFacherita{
+    width: 200%;
+    margin-top: 50px;
+    grid-row: 1;
+    grid-column: 2/3;
+
+}
+
+#textoLoaFacheraFacherita p{
+    margin-top: -30px;
+    margin-right: 5%;
+}
+
+#textoEstudio{
+    grid-row: 2;
+    grid-column: 1/2;
+}
+
+#textoEstudio p{
+    margin-top: 5%;
+}
+
+#textoMesaTrabajo{
+    grid-row: 3;
+    grid-column: 2/3;
+    width: 200%;
+    height: auto;
+}
+
+#textoMesaTrabajo p{
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 5%;
+}
+
+
+@media (width<1300px){
+
+    
+    #imgLoaFacheraFacherita{
+        width: 100%;
+        margin-left: 20%;
+    }
+
+    #textoLoaFacheraFacherita{
+        margin-left: 10%;
+    }
+    
+    #textoLoaFacheraFacherita p{
+        margin-top: -40px;
+        margin-right: 10%;
+    }
+
+    #imgEstudio{
+        margin-left: -10%;
+    }
+
+    #textoEstudio{
+        margin-left: -5%;
+    }
+
+    #textoMesaTrabajo{
+        margin-left: 5%;
+    }
+}
+
+@media (width<1200px){
+
+    #imgMesaTrabajo{
+        margin-top: 40%;
+    }
+}
+
 @media (width<900px){
-    .contenedorTexto p{
-        margin-left: 1px; 
-        margin-top: 20px;  
+
+    .contenedorArtista{
+        display: flex;
+        flex-direction: column;
     }
-    .contenedorTexto h2{
-        text-align: center;
+
+    .contenedorTexto{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #imgLoaFacheraFacherita{
+        margin-top: 40px;
+        margin-left: 10%;
+        width: 80%;
+        height: 100%;
+    }
+
+    #textoLoaFacheraFacherita{
+        width: 100%;
         margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    #textoLoaFacheraFacherita h2{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+
+    #textoLoaFacheraFacherita p{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+
+    #imgEstudio{
+        width: 90%;
+        margin-top: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #textoEstudio{
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #textoEstudio p{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+
+        
+    #imgMesaTrabajo{
+        width: 90%;
+        margin-top: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #textoMesaTrabajo{
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #textoMesaTrabajo p{
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+
+
+
+}
+
+@media (width<700px){
+    .artista{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .contenedorArtista{
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
 
