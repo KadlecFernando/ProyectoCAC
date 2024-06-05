@@ -630,31 +630,6 @@ html{
     cursor:pointer;
 }
 
-
-@media (width<900px){
-    .contenedorArtista{
-        display: flex;
-        flex-direction: column;
-    }
-
-}
-@media (width<700px){
-    .artista{
-        padding-top: 0px;
-        padding-bottom: 0px;
-        }
-    .contenedorArtista{
-        width: 100%;
-        height: 100%;
-    }
-
-}
-
-
-@media (width<900px){
-
-}
-
 .artista h2{
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
@@ -671,6 +646,49 @@ html{
     margin-left: 16%;
     margin-top: -6%;
 }
+
+
+@media (width<900px){
+    .contenedorArtista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+}
+
+@media (width<700px){
+    .artista{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .contenedorArtista{
+        width: 100%;
+        height: 100%;
+        background-image: url("../Imagenes/loaBannerRecortada.jpg");
+        display: flex;
+        align-items:flex-start;
+    }
+
+    .contenedorArtista h2{
+        margin-left: 5%;
+        margin-top: 50%;
+    }
+
+    .contenedorArtista h3{
+        margin-left: 5%;
+    }
+
+}
+
+
+@media (width<900px){
+
+}
+
+
 
 
 @media (width<900px){
