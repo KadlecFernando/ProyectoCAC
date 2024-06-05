@@ -55,9 +55,9 @@
     text-decoration: none;
     color: inherit;
  }
-  .ListaCompleta .ElementoLista:hover{
-    transform: scale(1.2);
-   }
+ .ListaCompleta .ElementoLista:hover{
+   transform: scale(1.2);
+  }
 .submenu {
     position: absolute;
     top: 100%; 
@@ -143,6 +143,7 @@
 }
 
 #logoBlanco{
+    transition: transform 0.2s ease, text-decoration 0.2s ease;
     z-index: 0;
     animation: transicion-logoBlanco linear both;
     animation-timeline: scroll(root);
@@ -150,30 +151,37 @@
 }
 
 #logoNegro{
+    transition: transform 0.2s ease, text-decoration 0.2s ease;
     z-index: 1;
     animation: transicion-logoNegro linear both;
     animation-timeline: scroll(root);
     animation-range: 0 100px;
 }
+#logoNegro:hover{
+    transform: scale(1.2)
+}
+#logoBlanco:hover{
+    transform: scale(1.2)
+}
 
 @keyframes transicion-logoNegro {
     from{
-        /* z-index: 1; */
+        z-index: 1; 
         opacity: 1;
        } 
     to {
-        /* z-index: 0; */
+        z-index: 0; 
         opacity: 0;
     }
 }
 
 @keyframes transicion-logoBlanco {
     from{
-        /* z-index: 0; */
+        z-index: 0; 
         opacity: 0;
        } 
     to {
-        /* z-index: 1; */
+        z-index: 1;
         opacity: 1;
     }
 }
@@ -209,6 +217,7 @@
 }
 
 .GGinstagram {
+    transition: transform 0.3s;
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -244,6 +253,9 @@
     background: currentColor;
     right: 1px;
     top: 1px;
+}
+.GGinstagram:hover{
+    transform:scale(1.3)
 }
 
 .menu-hamburguesa {

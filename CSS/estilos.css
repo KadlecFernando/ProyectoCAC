@@ -603,7 +603,7 @@ html{
 }
 
 .contenedorArtista:hover{
-    transform:scale(1.1);
+    transform:scale(1.04);
     cursor:pointer;
 }
 
@@ -663,7 +663,7 @@ html{
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    height: 600px; 
+    height: 930px; 
     width: 100%;
     /* padding: 0 20px;  */
     background-color: lightblue;
@@ -705,8 +705,8 @@ html{
 
 
 .turno ,.tienda {
-    width: 70%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -725,7 +725,7 @@ html{
     height: 80%;
     margin-left: 8%;
 }
-
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorTurno {
     /* text-align: right; */
     background-color:lightblue 
@@ -750,27 +750,50 @@ html{
 #turno-form{
     height: 100%;
 }
-
-.turno button {
-    /* width: 20%;
-    height: 45%; */
-    padding: 10px 20px;
-    font-size: 20px;
-    /* line-height: 100%; */
-    text-align: center;
-    cursor: pointer;
-    border: none;
-    /* border-radius: 50%; */
-    background-color: #bba004;
-    color: #fff;
-    transition: background-color 0.3s ease;
-    margin-left: 80%;
+.Input-box{
+    width: 100%;
+    margin-top: 20px;
 }
-  
-button:hover {
-    background-color: #0056b3;
+.Input-box label{
+    color: black;
+    font-size:1.2rem;
 }
+.boton-form{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    
+}
+.boton-form button{
+    width:60%;
+    margin-top:25px;
+    font-size:20px;
+    padding: 10px;
+    border-radius:3px;
+    
 
+}
+.Input-box input{
+    position: relative;
+    height:40px;
+    width:100%;
+    outline: none;
+    font-size:1rem;
+    color:#707070;
+    margin-top:8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 0;
+
+}
+@media (width < 700px){
+    .turno ,.tienda { 
+        width:100%;
+    }
+    .contenedorTurno{
+        width: 95%;
+    }
+}
 /*-----------------------------------------------FOOTER----------------------------------------------*/
 
 .estilosFooter{

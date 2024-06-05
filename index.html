@@ -124,25 +124,54 @@
 
         <section class="tiendaTurno">
             <div class="contenedorTienda">    
-                <article class="tienda">
+                <div class="tienda">
                     <a href="Tienda.html" target="_blank"><img id="botonLimon" src="./Imagenes/LimoncioCash.png" alt=""></a>
                     <!-- <button id="tienda-btn"> Tienda</button>  CTRL + K + C = Win.--> 
-                </article>
+                </div>
             </div>
 
             <div class="contenedorTurno">
-                <article class="turno">
+                <div class="turno">
                     <form id="turno-form">
-                        <h2>¡Agendá tu turno!</h2>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required><br><br>
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" required><br><br>
-                        <label for="fecha">Solicitar Fecha:</label>
-                        <input type="date" id="fecha" name="fecha" required><br><br>
-                        <button type="submit">Agendar</button>
+                        <h2>Consultar Presupuesto</h2>
+                    <div class="Input-box"> 
+                        <label>Nombre y Apellido:</label> 
+                        <input type="text" placeholder="Ingrese nombre y apellido">
+                    </div>
+                    <div class="Input-box"> 
+                        <label>Contacto (mail/wpp):</label>
+                        <input type="text" placeholder="Ingrese su e-mail/Whatsapp">
+                    </div>
+                    <div class="Input-box"> 
+                        <label>Estilos:</label>
+                         <select name="Estilos">
+                            <option value="A">Loa</option>
+                            <option value="B">Fachera</option>
+                            <option value="C">Facherita</option>
+                         </select>
+                    </div>
+                    <div class="Input-box"> 
+                        <label>Referencias:</label>
+                        <input type="text" placeholder="Breve descripción flashera de su tatuaje">
+                    </div>
+                    <div class="input-imagen">
+                        <input type="file" name="Subir una referencia" accept="image/*">
+
+                    </div>
+                    <div class="Input-box"> 
+                        <label>Tamaño:</label>
+                        <input type="text" placeholder="El tamaño no es lo más importante">
+                    </div>
+                    <div class="Input-box"> 
+                        <label>Zona del Cuerpo:</label>
+                        <input type="text" placeholder="En donde usted quiera UwU">
+                    </div>
+                    <div class="boton-form">
+                        <button type="submit" value="Registro"> Registro</button>
+                    </div>
+
                     </form>
-                </article>
+                </div>
             </div>
         </section>
 
