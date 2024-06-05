@@ -489,9 +489,8 @@ html{
     width: 100%;
     background-color: rgb(241, 151, 91);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
+    justify-content: space-between;
+    align-items: flex-start;
     background-image: url(/Imagenes/fondoBanner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -502,56 +501,80 @@ html{
 }
 
 .divProductos{
-    width: 33%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .divProductos img{
-    height: 35%;
-    width: 50%;
+    max-width: 50%;
+    height: auto;
+}
+
+.divProductos h2{
+    height: 20%; /* Esto se lo agrego para que se puedan alinear las imagenes */
 }
 
 .divRespuesta{
-    width: 33%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .divRespuesta img{
-    height: 35%;
-    width: 50%;
+    max-width: 50%;
+    height: auto;
 }
 
+.divRespuesta h2{
+    height: 20%;
+}
 .divOnda{
-    width: 33%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 5%;
+    margin-right: 3%;
 }
 
 .divOnda img{
-    height: 35%;
-    width: 50%;
+    max-width: 50%;
+    height: auto;
+}
+
+.divOnda h2{
+    height: 20%;
 }
 
 @media (width<900px){
     .transicionGaleriaArtista{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .divProductos{
+        margin-left: 0;
+    }
+
+    .divOnda{
+        margin-right: 0;
     }
 
 }
+
 @media (width<700px){
     .transicionGaleriaArtista{
         width: 100%;
