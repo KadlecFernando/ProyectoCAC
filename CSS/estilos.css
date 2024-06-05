@@ -492,7 +492,7 @@ html{
     justify-content: center;
     align-items: center;
     margin-top: 0px;
-    background-image: url(/Imagenes/fondoBanner.jpg);
+    background-image: url(../Imagenes/fondoBanner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
