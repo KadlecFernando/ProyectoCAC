@@ -11,7 +11,7 @@ html{
 
 .header {
     height: 85px;
-    width: 100vw;
+    width: 100%;
     position:fixed;
     display:flex;
     justify-content: space-between;
@@ -37,31 +37,42 @@ html{
     }
 }
 
+.header nav{
+    width: 29%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .ListaCompleta {
+    width: 100%;
     display: flex;
     list-style-type: none;
-    padding: 100px;
+    padding:0;
     margin: 0;
     font-size: 30px;
     font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-style: normal;
     cursor: pointer;
+    justify-content: space-between;
 }
 
 .ListaCompleta .ElementoLista {
     transition: transform 0.2s ease, text-decoration 0.2s ease;
-    justify-content: space-between;
-    margin: 0 6rem;
 }
+
 .ListaCompleta a {
     text-decoration: none;
     color: inherit;
- }
+}
+
  .ListaCompleta .ElementoLista:hover{
    transform: scale(1.2);
-  }
+}
+
 .submenu {
     position: absolute;
     top: 100%; 
@@ -133,14 +144,14 @@ html{
     display: block;
 }
 .logo{
-    width: 20%;
+    width: 29%;
     height: 100%;
     position: relative;
     cursor: pointer;
+    margin-left: 5%;
 }
 
 .logo img {
-    margin-left:10%;
     width: 130px; 
     height: 100%;
     position: absolute;
@@ -190,17 +201,15 @@ html{
     }
 }
 
-.nav{
-    width: 60%;
-}
 
 .sociales{
     /* padding: 4%; */
-    width: 20%;
+    width: 29%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    margin-right: 5%; 
 }
  @keyframes insta-scroll{  
     to{ color: white;}
@@ -413,7 +422,7 @@ html{
 
 .carrusel{
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 85%;
 }
 
@@ -483,31 +492,44 @@ html{
 }
 }
 
-/*---------------------------------TRANSICION( + DATA)--------------------------------------*/
+/*---------------------------------TRANSICION(+ DATA)--------------------------------------*/
 .transicionGaleriaArtista{
     height: 800px;
     width: 100%;
     background-color: rgb(241, 151, 91);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-image: url(/Imagenes/fondoBanner.jpg);
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Imagenes/fondoBanner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-family: "Zen Maru Gothic", serif;
     font-size: clamp(0.5em, 1vw, 1em);
-    text-align: justify;
+    /* text-align: justify; */
+}
+
+.divTransicion{
+    display: flex;
+    width: 90%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    /* padding: 0 5% 0 5%; */
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .divProductos{
-    width: 30%;
+    width: 31%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-left: 3%;
+    align-items: center; 
+    /* Esto es para probar que las calles están bien*/
+    /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 8rem; */
 }
 
 .divProductos img{
@@ -520,13 +542,14 @@ html{
 }
 
 .divRespuesta{
-    width: 30%;
+    width: 31%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 8rem; */
 }
 
 .divRespuesta img{
@@ -538,13 +561,14 @@ html{
     height: 20%;
 }
 .divOnda{
-    width: 30%;
+    width: 31%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 3%;
+    /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 8rem; */
 }
 
 .divOnda img{
@@ -567,10 +591,17 @@ html{
 
     .divProductos{
         margin-left: 0;
+        width: 60%;
+    }
+
+    .divRespuesta{
+        margin-right: 0;
+        width: 60%;
     }
 
     .divOnda{
         margin-right: 0;
+        width: 60%;
     }
 
 }
@@ -598,7 +629,7 @@ html{
 }
 
 .articleArtista{
-    width: 80%;
+    width: 90%;
     height: 80%;
     margin: 3rem auto;
 }
@@ -842,6 +873,7 @@ html{
     height: 200px;
     width:100%;
     display: block;
+    padding-top: 2%;
     /* overflow: hidden; */
 }
 
@@ -862,18 +894,36 @@ html{
 
 .contenedorListasFooter{
     width: 100%;
+    height: auto;
     display: flex;
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
 }
 
 #listasFooter{
     height: 150px;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-left: 15%;
+    /* margin-left: 15%; */
 }
+
+#listasFooter ul{
+    list-style-type: none;
+    width: 29%;
+    padding: 0;
+}
+
+.listaHorarios{
+
+}
+
+.listaContacto{
+
+}
+
+
+
 @media (width<800px){
     
     #listasFooter{
@@ -887,12 +937,6 @@ html{
     }
 }
 
-#listasFooter ul{
-    list-style-type: none;
-    /* padding: 0px 200px; */
-    margin: 0;
-    width: 33%;
-}
 
 #copyrightFooter{
     display: flex;

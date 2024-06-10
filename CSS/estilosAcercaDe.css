@@ -328,7 +328,7 @@
 .contenedorTexto p{
     font-size: calc(1vw + .7em);
     margin-left: 90px;
-    text-align:justify;
+    /* text-align:justify; */
     font-family: "Zen Maru Gothic", serif;
     margin-top: 100px;
 }
