@@ -505,6 +505,9 @@ html{
     background-repeat: no-repeat;
     background-position: center;
     font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style:normal;
+    color:#4d4b4b;
     font-size: clamp(0.5em, 1vw, 1em);
     /* text-align: justify; */
 }
@@ -572,8 +575,8 @@ html{
 }
 
 .divOnda img{
-    max-width: 50%;
-    height: auto;
+    max-height: 50%;
+    width: 29vw;
 }
 
 .divOnda h2{
@@ -582,26 +585,42 @@ html{
 
 @media (width<900px){
     .transicionGaleriaArtista{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .divTransicion{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: clamp(1em, 3vw, 3em);
+        margin-bottom: 5%;
+        height: auto;
+    }
 
+    .divTransicion{
+        margin: 5%;
     }
 
     .divProductos{
         margin-left: 0;
-        width: 60%;
+        width: 90%;
     }
 
     .divRespuesta{
         margin-right: 0;
-        width: 60%;
+        width: 90%;
     }
 
     .divOnda{
         margin-right: 0;
-        width: 60%;
+        width: 90%;
+    }
+
+    .divTransicion img{
+        width: 80%;
     }
 
 }
@@ -610,6 +629,7 @@ html{
     .transicionGaleriaArtista{
         width: 100%;
         height: 100%;
+        display: flex;
     }
 
 }
@@ -663,6 +683,9 @@ html{
 
 .artista h2{
     font-family: "Caveat", cursive;
+    /* font-family: "Oooh Baby", cursive;
+    font-weight: 400;
+    font-style: normal; */
     font-optical-sizing: auto;
     font-size: clamp(2em, 7vw, 7em);
     font-style: normal;
@@ -714,14 +737,6 @@ html{
 
 }
 
-
-@media (width<900px){
-
-}
-
-
-
-
 @media (width<900px){
     .contenedorTexto h2{
         text-align: center;
@@ -738,14 +753,11 @@ html{
     height: 930px; 
     width: 100%;
     /* padding: 0 20px;  */
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    
+    background-color: rgb(248, 236, 210);
 }
-@media (width<900px) {
-    .tiendaTurno{
-        height: auto;
-        flex-direction: column-reverse;
-    }
-}
+
 
 .contenedorTienda,
 .contenedorTurno {
@@ -756,58 +768,82 @@ html{
     align-items: center;
 }
 
-@media (width<900px){
-    .contenedorTienda{
-        width: 100%;
-    }
-    .contenedorTurno{
-        width: 90%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .tienda{
-        margin-top: 5%;
-        margin-bottom: 5%;;
-    }
-}
-
-.contenedorTurno {
-    /* text-align: right;  */
-}
-
-
 .turno ,.tienda {
-    width: 80%;
+    /* width: 80%; */
     height: 80%;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .contenedorTienda{
     background-color: white;
+    width: 29%;
 }
 
 .tienda {
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    background-color: rgb(250, 198, 87);
+    margin-left: 5%;
+    width: 70%;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 #botonLimon{
-    width: 80%;
-    height: 80%;
-    margin-left: 8%;
+    width:125%;
+    height: 125%;
+    /* margin-left: 8%; */
+    margin-left: -11%;
 }
+
+@media (width<900px){
+
+    .tiendaTurno{
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .contenedorTienda{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .tienda{
+        width: 70%;
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 18%; /* No tengo idea por qué no se centra la imagen*/
+    }
+
+    #botonLimon{
+        width: 100%;
+    }
+}
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorTurno {
     /* text-align: right; */
-    background-color:lightblue 
+    /* background-color:lightblue; */
+    background-color: rgb(248, 236, 210);
+    width: 71.5%; 
+    justify-content: center;
+    align-items: center;
 }
 
 .turno h2 {
     margin-top: 5%;
     text-align: center;
-    font-size: clamp(2em, 1vw, 5em);
-    font-family: "Cutive Mono", monospace; 
+    font-size: clamp(2.5em, 1.5vw, 5em);
+    /* font-family: "Cutive Mono", monospace;  */
+    font-family: "Oooh Baby", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .turno{
@@ -817,6 +853,10 @@ html{
     font-family: "Zen Maru Gothic", serif;
     font-size: calc(0.5vw + .7em);
     overflow: hidden;
+    width: 90%;
+    height: 90%;
+    margin-right: 5%;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #turno-form{
@@ -858,18 +898,26 @@ html{
     padding: 0;
 
 }
-@media (width < 700px){
-    .turno ,.tienda { 
-        width:100%;
-    }
+
+@media (width<900px){
+
     .contenedorTurno{
-        width: 95%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .turno{
+        width: 100%;
     }
 }
+
 /*-----------------------------------------------FOOTER----------------------------------------------*/
 
 .estilosFooter{
-    background-color: #F24141;
+    background-color: #fc3b00d8;
     height: 200px;
     width:100%;
     display: block;
@@ -914,28 +962,27 @@ html{
     padding: 0;
 }
 
-.listaHorarios{
-
-}
-
-.listaContacto{
-
-}
-
-
 
 @media (width<800px){
-    
+    .estilosFooter{
+        height: auto;
+    }
+
+    .contenedorListasFooter{
+        margin-bottom: -10%;
+    }
+
     #listasFooter{
-        height: 150px;
+        /* height: 150px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-left: -5%;
-        overflow: hidden;
+        overflow: hidden; */
+        font-size: calc(3vw + .3em);
     }
-}
+} 
 
 
 #copyrightFooter{
