@@ -911,7 +911,13 @@ html{
 
     .turno{
         width: 100%;
+        padding: 5%;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
 }
 
 /*-----------------------------------------------FOOTER----------------------------------------------*/
