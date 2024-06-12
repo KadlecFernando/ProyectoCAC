@@ -524,7 +524,7 @@ html{
 }
 
 .divProductos{
-    width: 31%;
+    width: 32%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -545,7 +545,7 @@ html{
 }
 
 .divRespuesta{
-    width: 31%;
+    width: 32%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -564,7 +564,7 @@ html{
     height: 20%;
 }
 .divOnda{
-    width: 31%;
+    width:32%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -761,7 +761,7 @@ html{
 
 .contenedorTienda,
 .contenedorTurno {
-    width: 50%; 
+    /* width: 50%;  */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -777,7 +777,7 @@ html{
 }
 .contenedorTienda{
     background-color: white;
-    width: 29%;
+    width: 34%;
 }
 
 .tienda {
@@ -831,7 +831,7 @@ html{
     /* text-align: right; */
     /* background-color:lightblue; */
     background-color: rgb(248, 236, 210);
-    width: 71.5%; 
+    width: 64.5%; 
     justify-content: center;
     align-items: center;
 }
