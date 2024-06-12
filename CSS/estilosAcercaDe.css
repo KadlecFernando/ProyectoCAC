@@ -4,10 +4,9 @@
 }
 
 /*--------------------------------------------------------- HEADER --------------------------------------------------------------*/
-
 .header {
     height: 85px;
-    width: 100vw;
+    width: 100%;
     position:fixed;
     display:flex;
     justify-content: space-between;
@@ -33,31 +32,58 @@
     }
 }
 
+.header nav{
+    width: 29%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .ListaCompleta {
+    width: 100%;
     display: flex;
     list-style-type: none;
-    padding: 100px;
+    padding:0;
     margin: 0;
     font-size: 30px;
     font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-style: normal;
     cursor: pointer;
+    justify-content: space-between;
 }
-
+#pagina-acerca{
+    color: gray;
+    animation: color-acerca linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+@keyframes colorSeleccionado{
+    from{
+        color: gray;
+    }
+    to {
+        color:rgb(212, 212, 212);
+    }
+}
 .ListaCompleta .ElementoLista {
     transition: transform 0.2s ease, text-decoration 0.2s ease;
-    justify-content: space-between;
-    margin: 0 6rem;
 }
+
 .ListaCompleta a {
     text-decoration: none;
     color: inherit;
- }
+}
+#pagina-acerca:hover{
+    transform: scale(1.0);
+
+}
  .ListaCompleta .ElementoLista:hover{
    transform: scale(1.2);
-  }
+}
+
 .submenu {
     position: absolute;
     top: 100%; 
@@ -129,14 +155,14 @@
     display: block;
 }
 .logo{
-    width: 20%;
+    width: 29%;
     height: 100%;
     position: relative;
     cursor: pointer;
+    margin-left: 5%;
 }
 
 .logo img {
-    margin-left:10%;
     width: 130px; 
     height: 100%;
     position: absolute;
@@ -186,17 +212,15 @@
     }
 }
 
-.nav{
-    width: 60%;
-}
 
 .sociales{
     /* padding: 4%; */
-    width: 20%;
+    width: 29%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    margin-right: 5%; 
 }
  @keyframes insta-scroll{  
     to{ color: white;}
@@ -284,6 +308,7 @@
         display: none;
     }
 }
+
 
 /*-----------------------------------------------MAIN----------------------------------------------*/
 

@@ -7,3 +7,4 @@ function handleClickOutside(event) {
     }
 }
 document.addEventListener('click', handleClickOutside); /*hay click tonces se ejecuta jefe */
+
