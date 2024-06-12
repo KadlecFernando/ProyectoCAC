@@ -73,7 +73,6 @@ html{
     top: 100%; 
     right: 2px;
     width: 25%;
-    background-color: rgba(242, 61, 61, 0.7); 
     z-index: 999; 
     display: none;
     font-family: "Zen Maru Gothic", serif;
@@ -292,13 +291,19 @@ html{
         display: none;
     }
 }
+
 @media (width<601px){
-.header{ 
-    background-color:rgba(242, 61, 61, 0.7);
-    animation: headerRojo linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 100px;
-    z-index: 9999;}
+    .header{ 
+        background-color:rgba(242, 133, 61, 0.7);
+        animation: headerRojo linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 100px;
+        z-index: 9999;
+    }
+
+    .submenu{
+        background-color: rgba(242, 133, 61, 0.7);
+    }
 }
 
 @keyframes headerRojo {
@@ -500,12 +505,11 @@ html{
 }
 }
 
-/*---------------------------------TRANSICION(+ DATA)--------------------------------------*/
+/*---------------------------------LIMONES RE CREISI--------------------------------------*/
 .transicionGaleriaArtista{
-    height: 600px;
+    height: 850px;
     width: 100%;
     background-color: rgb(241, 151, 91);
-    display:block;
     background-image: url("../Imagenes/fondoBanner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -521,7 +525,7 @@ html{
 .divTransicion{
     display: flex;
     width: 90%;
-    height: 70%;
+    height: 50%;
     padding-left:5%;
     padding-right:5%;
     padding-top: 3%;
@@ -582,8 +586,8 @@ html{
 }
 
 .divOnda img{
-    max-height: 50%;
-    width: 29vw;
+    max-height: 100%;
+    width: 100%;
 }
 
 .divOnda h2{
@@ -650,6 +654,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3%;
 }
 
 .bannerArtista{
@@ -660,6 +665,8 @@ html{
 .enlace{
     text-decoration: none;
     color:inherit;
+    width:100%;
+    height: 100%;
 }
 
 .contenedorArtista{
@@ -673,7 +680,7 @@ html{
     background-image: url("../Imagenes/loaBanner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-y: 25%;
     justify-content:left;
     align-items: center;
     transition: transform 0.3s ease;
@@ -684,41 +691,36 @@ html{
     cursor:pointer;
 }
 
-.artista h2{
+.contenedorArtista h2{
     font-family: "Caveat", cursive;
-    /* font-family: "Oooh Baby", cursive;
-    font-weight: 400;
-    font-style: normal; */
     font-optical-sizing: auto;
-    font-size: clamp(2em, 7vw, 7em);
+    font-size: clamp(5em, 6vw, 6em);
     font-style: normal;
-    margin-top: 7%;
-    margin-left: 15%;
     color: white;
+    margin-left: 14%;
+    margin-top: 2%;
 }
 
-.artista h3{
-    font-size: clamp(1em, 1.5vw, 1.5em);
+.contenedorArtista h3{
+    font-size: clamp(1.4em, 1.5vw, 1.5em);
     color: white;
-    margin-left: 16%;
+    margin-left: 15%;
     margin-top: -6%;
 }
 
-
-@media (width<900px){
-    .contenedorArtista{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:flex-start;
+@media (width < 1500px){
+    .contenedorArtista h2{
+        margin-top: 4%;
     }
-
 }
 
-@media (width<700px){
+
+@media (width < 900px){
     .artista{
         padding-top: 0px;
         padding-bottom: 0px;
+        height: 50vw;
+        padding-bottom: 5%;
     }
 
     .contenedorArtista{
@@ -726,12 +728,13 @@ html{
         height: 100%;
         background-image: url("../Imagenes/loaBannerRecortada.jpg");
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items:flex-start;
     }
 
     .contenedorArtista h2{
-        margin-left: 5%;
-        margin-top: 50%;
+        margin-left: 4%;
     }
 
     .contenedorArtista h3{
@@ -740,10 +743,14 @@ html{
 
 }
 
-@media (width<900px){
-    .contenedorTexto h2{
-        text-align: center;
-        margin-left: 0px;
+
+@media (width<700px){
+    .contenedorArtista h2{
+        font-size: clamp(4em, 6vw, 7em);
+    }
+
+    .contenedorArtista h3{
+
     }
 }
 
@@ -757,8 +764,8 @@ html{
     width: 100%;
     /* padding: 0 20px;  */
     /* background-color: lightblue; */
-    
     background-color: rgb(248, 236, 210);
+    padding-top: 5%;
 
 }
 
