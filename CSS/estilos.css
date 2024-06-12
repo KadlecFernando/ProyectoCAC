@@ -8,7 +8,6 @@ html{
 }
 
 /*--------------------------------------------------------- HEADER --------------------------------------------------------------*/
-
 .header {
     height: 85px;
     width: 100%;
@@ -16,8 +15,7 @@ html{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    /*background-color:rgba(242, 109, 61, 100);*/
-    background-color:rgba(7,140,127, 100);
+    background-color:rgba(242, 61, 61,0.0);
     animation: mejora-header linear both;
     animation-timeline: scroll(root);
     animation-range: 0 100px;
@@ -26,12 +24,9 @@ html{
 
 @keyframes mejora-header {
     from{
-       /*background:rgba(255, 109, 61, 0);*/
-       background-color:rgba(7,140,127, 0);
        color: black
        } 
     to {
-        /*background: rgba(242, 109, 61, 100);*/
         background-color:rgba(7,140,127, 100);
         color:white
     }
@@ -78,7 +73,7 @@ html{
     top: 100%; 
     right: 2px;
     width: 25%;
-    background-color: rgba(14, 180, 166, 0.0); 
+    background-color: rgba(242, 61, 61, 0.7); 
     z-index: 999; 
     display: none;
     font-family: "Zen Maru Gothic", serif;
@@ -297,7 +292,20 @@ html{
         display: none;
     }
 }
+@media (width<601px){
+.header{ 
+    background-color:rgba(242, 61, 61, 0.7);
+    animation: headerRojo linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+    z-index: 9999;}
+}
 
+@keyframes headerRojo {
+    to {
+        background-color:rgba(7,140,127, 100);
+    }
+}
 
 /*----------------------------------------------- PRIMERA SECCION -------------------------------------------------------------------------------------------*/
 
