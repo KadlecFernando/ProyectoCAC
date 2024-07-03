@@ -420,12 +420,14 @@
     gap: 16px;
 }
 
+
+
 .producto{
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgb(255, 251, 251);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border-radius: 15px; /* Bordes redondeados */
     float: left; /* Colocar a la izquierda */
@@ -446,20 +448,57 @@
     width: 100%;
 }
 
+.divDescripcion{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divPrecio{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 3vw;
+}
+
 .nombreProducto{
     font-family: "Zen Maru Gothic", serif;
-    font-size: calc(1vw + .7em);
+    font-size: clamp(0.8em, 1.5vw, 3em);
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.nombreProducto{
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que desborda del contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto desborda */
+    max-width: 100%; /* Ajusta el ancho máximo del texto */
+    display: inline-block; /* Asegura que el texto respete el tamaño máximo */
+    vertical-align: middle; /* Alinea verticalmente el texto si es necesario */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar que es interactivo */
+}
+
+.nombreProducto:hover{
+    white-space: normal; /* Muestra todo el texto cuando el usuario pasa el cursor */
+    overflow: visible; /* Muestra el texto completo */
+    text-overflow: unset; /* Elimina los puntos suspensivos */
 }
 
 .precio{
     font-family: "Zen Maru Gothic", serif;
-    font-size: calc(0.8vw + .7em);
+    font-size: clamp(0.8em, 1.5vw, 3em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
 }
 
 .buttonComprar{
     display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
+    padding: 1vw 2vw;
+    font-size: clamp(0.8em, 1vw, 3em);
     font-weight: bold;
     text-align: center;
     text-decoration: none;
