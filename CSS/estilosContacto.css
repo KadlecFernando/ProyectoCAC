@@ -312,28 +312,183 @@
 
 /*-----------------------------------------------MAIN----------------------------------------------*/
 
-.trabajandoando{
-    width: 90%;
-    height: 80%;
-}
-.titulo{
-    background-image: url(../Imagenes/BackgroundHomeDesvanece.png);
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(253, 190, 165, 0.5)), url(../Imagenes/BackgroundHome.jpg); */
-    background-size: cover;
-    /* background-position: center;    */
-    height: 900px;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-position: bottom; /*Esto hace que la imagen haga el cover anclando abajo*/
-    /* background-color:rgb(248, 232, 177); */
-    background-color:rgb(241, 151, 91);
-    /* border-bottom: 30px solid rgba(8, 150, 166, 0.30); */
+
+.tiendaTurno {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 930px; 
+    width: 100%;
+    /* padding: 0 20px;  */
+    /* background-color: lightblue; */
+    background-color: rgb(248, 236, 210);
+    padding-top: 5%;
+
 }
 
+
+.contenedorTienda,
+.contenedorTurno {
+    /* width: 50%;  */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.turno ,.tienda {
+    /* width: 80%; */
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorTienda{
+    background-color: white;
+    width: 34%;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tienda {
+    /* background-color: lightblue; */
+    background-color: rgb(250, 198, 87);
+    margin-left: 5%;
+    width: 70%;
+    height: 90%;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#botonLimon{
+    width:125%;
+    height: 125%;
+    /* margin-left: 8%; */
+    margin-left: -11%;
+}
+
+@media (width<900px){
+
+    .tiendaTurno{
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .contenedorTienda{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .tienda{
+        width: 70%;
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 18%; /* No tengo idea por qué no se centra la imagen*/
+    }
+
+    #botonLimon{
+        width: 100%;
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.contenedorTurno {
+    /* text-align: right; */
+    /* background-color:lightblue; */
+    background-color: rgb(248, 236, 210);
+    width: 64.5%; 
+    justify-content: center;
+    align-items: center;
+}
+
+.turno h2 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: clamp(2.5em, 1.5vw, 5em);
+    /* font-family: "Cutive Mono", monospace;  */
+    font-family: "Oooh Baby", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.turno{
+    background-color:white;
+    display: flex;
+    /* flex-direction: column; */
+    font-family: "Zen Maru Gothic", serif;
+    font-size: calc(0.5vw + .7em);
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    margin-right: 5%;
+    box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#turno-form{
+    height: 100%;
+}
+.Input-box{
+    width: 100%;
+    margin-top: 20px;
+}
+.Input-box label{
+    color: black;
+    font-size:1.2rem;
+}
+.boton-form{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    
+}
+.boton-form button{
+    width:60%;
+    margin-top:25px;
+    font-size:20px;
+    padding: 10px;
+    border-radius:3px;
+    
+
+}
+.Input-box input{
+    position: relative;
+    height:40px;
+    width:100%;
+    outline: none;
+    font-size:1rem;
+    color:#707070;
+    margin-top:8px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+    padding: 0;
+
+}
+
+@media (width<900px){
+
+    .contenedorTurno{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .turno{
+        width: 100%;
+        padding: 5%;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
 
 
 /*-----------------------------------------------FOOTER----------------------------------------------*/
