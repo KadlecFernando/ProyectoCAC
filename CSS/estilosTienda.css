@@ -413,7 +413,7 @@
     grid-template-columns: repeat(
         auto-fit,
         minmax(
-            400px,
+            20vw,
             1fr
         )
     );
