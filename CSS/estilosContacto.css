@@ -330,6 +330,7 @@
 .contenedorTurno {
     /* width: 50%;  */
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,14 +413,22 @@
     width:100%;
     
 }
-.boton-form button{
-    width:60%;
-    margin-top:25px;
-    font-size:20px;
-    padding: 10px;
-    border-radius:3px;
-    
 
+.boton-form button{
+    display: inline-block;
+    padding: 1vw 2vw;
+    font-size: clamp(0.8em, 1vw, 5em);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: #0f9c66;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    margin-top: 1vw;
 }
 .Input-box input{
     position: relative;
@@ -454,6 +463,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 10vw;
+        margin-left: 5%;
         margin-bottom: 5%;
     }
 
@@ -466,8 +477,23 @@
         align-items: center;
     }
 
+    #contenedorMensaje{
+        width: 80%; 
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+    }
+
 }
 
+@media (width<600px){
+
+    .contenedorTurno{
+        margin-top: 15vw;
+    }
+}
 
 /*-----------------------------------------------FOOTER----------------------------------------------*/
 
@@ -536,4 +562,6 @@
     width:100%;
     font-size: calc(1vw + .3em);
 }
+
+
 

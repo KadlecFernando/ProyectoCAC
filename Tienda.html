@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Loa</title>
-    <link rel="icon" type="image/png" href="./Imagenes/LimoncioCash.png" >
+    <link rel="icon" type="image/png" href="./Imagenes/iconLimon.png" >
     <link rel="stylesheet" href="./CSS/estilosTienda.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,10 @@
                     <li><a href="./Tienda.html">Tienda</a></li>
                 </ul>
                 <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a> 
+                
+                <!--Los script van en el body-->
                 <script src="./JS/logica.js"></script>
+                <script src="./JS/buttonCantidad.js"></script>
             </div>
     </header>
     <main>
@@ -69,20 +72,44 @@
                 </div>
                 <div class="productos">
                     
+                    <!--Hice muchos divs para que despues nos sirva para traer los datos de la DB y estilarlo mejor/-->
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/82/ae/74/82ae74ba63d19d99d9a1aaf3aee0dd4d.jpg" alt="">
-                            <h3 class="nombreProducto">Termo Limoncio 1.5lts</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$9.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Termo Limoncio Loaloa Tattoo</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$9.000</h3>
+                            </div>
+                                                        
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+                            
                             <button class="buttonComprar">Comprar</button>
+
                         </div>
                     </div>
                     
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/f4/a5/2a/f4a52a2993a841bcfe8c50652e108b42.jpg" alt="">
-                            <h3 class="nombreProducto">Llavero Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.500</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Llavero Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$1.500</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
@@ -90,72 +117,153 @@
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/93/2b/60/932b60cbfba5cc0e8eda24eed0a7aa55.jpg" alt="">
-                            <h3 class="nombreProducto">Remera Limoncio 1</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Remera Limoncio Cool Anteojos</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$10.000</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/bd/c5/07/bdc507e86b005107985429ff41ded62b.jpg" alt="">
-                            <h3 class="nombreProducto">Remera Limoncio Cool</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Remera Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$10.000</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/47/95/85/47958545f9211bf5b87544cfa7a5b680.jpg" alt="">
-                            <h3 class="nombreProducto">Pin Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Pin Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$2.000</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/21/10/b1/2110b1c2ecbbb24bf817968d68e93ead.jpg" alt="">
-                            <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$7.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$8.500</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/c1/c4/3d/c1c43deb6365caa1c355c547d629468e.jpg" alt="">
-                            <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$7.000</h3>
-                            <button class="buttonComprar">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="producto">
-                        <div class="detalleProducto">
-                            <img src="https://i.pinimg.com/originals/bd/c5/07/bdc507e86b005107985429ff41ded62b.jpg" alt="">
-                            <h3 class="nombreProducto">Remera Limoncio Cool</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Gorra Limoncio 2</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$8.500</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/47/95/85/47958545f9211bf5b87544cfa7a5b680.jpg" alt="">
-                            <h3 class="nombreProducto">Pin Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Pin Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$1.500</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/21/10/b1/2110b1c2ecbbb24bf817968d68e93ead.jpg" alt="">
-                            <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$8.500</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+
                             <button class="buttonComprar">Comprar</button>
+                            
                         </div>
                     </div>
                     <div class="producto">
                         <div class="detalleProducto">
                             <img src="https://i.pinimg.com/originals/c1/c4/3d/c1c43deb6365caa1c355c547d629468e.jpg" alt="">
-                            <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
-                            <h3 class="precio">$1.000</h3>
+                            <div class="divDescripcion">
+                                <h3 class="nombreProducto">Gorra Limoncio</h3> <!--Acá iria cargado de la DB*/-->
+                            </div>
+                            <div class="divPrecio">
+                                <h3 class="precio">$8.500</h3>
+                            </div>
+
+                            <div class="buttonCantidad">
+                                <button class="btn minus-btn">-</button>
+                                <input type="text" class="buttonCantidad-input" value="1">
+                                <button class="btn plus-btn">+</button>
+                            </div>
+                            
                             <button class="buttonComprar">Comprar</button>
                         </div>
                     </div>
