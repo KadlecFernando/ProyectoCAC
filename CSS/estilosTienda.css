@@ -444,7 +444,7 @@
 }
 
 .detalleProducto img{
-    height: 60%;
+    height: 50%;
     width: 100%;
 }
 
@@ -519,6 +519,61 @@
 .buttonComprar:focus {
     outline: none;
 }
+
+/* Estilos básicos para el botón y el input */
+.buttonCantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ancho del contenedor */
+    height: 10%;
+    margin-bottom: 1vw;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+  
+.buttonCantidad-input {
+    width: 30%; /* Ancho del input */
+    height: 50%;
+    text-align: center;
+    font-size: clamp(0.8em, 1vw, 3em);
+}
+  
+.btn {
+    width:3vw; /* Ancho del botón */
+    height: 3vw; /* Altura del botón */
+    border-radius: 50%; /* Hacer el botón redondo */
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #0f9c66b3;
+    color: white;
+    font-size: clamp(0.5em, 1.2vw, 3em);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.btn:hover {
+    background-color:#0f9c66;
+}
+
+.btn:focus {
+    outline: none;
+}
+  
+  /* Ajuste de estilos para los botones + y - */
+.minus-btn {
+    margin-right: 5px; /* Espacio entre los botones */
+    
+}
+  
+.plus-btn {
+    margin-left: 5px; /* Espacio entre los botones */
+    
+}
+  
+
 /*-----------------------------------------------FOOTER----------------------------------------------*/
 
 .estilosFooter{
