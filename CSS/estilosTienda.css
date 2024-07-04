@@ -572,6 +572,17 @@
     margin-left: 5px; /* Espacio entre los botones */
     
 }
+
+@media (width < 900px){
+    .btn {
+        width:5vw; /* Ancho del botón */
+        height: 5vw; /* Altura del botón */
+    }
+
+    .buttonCantidad-input {
+        height: 60%;
+    }
+}
   
 
 /*-----------------------------------------------FOOTER----------------------------------------------*/
