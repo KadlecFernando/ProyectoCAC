@@ -65,6 +65,7 @@
                 </ul>
                 <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a> 
                 <script src="./JS/logica.js"></script>
+                <script src="./JS/formularios.js"></script>
             </div>
     </header>
     <main>
@@ -147,23 +148,23 @@
 
             <div class="contenedorTurno">
                 <div class="turno">
-                    <form id="turno-form">
+                    <form class="turno-form" id="formPresupuesto" enctype="multipart/form-data">
                         <h2>Consultar Presupuesto</h2>
                     <div class="Input-box"> 
                         <label>Nombre:</label> 
-                        <input type="text" placeholder="Ingrese nombre">
+                        <input type="text" id="nombre" name ="nombre" placeholder="Ingrese nombre" required>
                     </div>
                     <div class="Input-box"> 
                         <label>Apellido:</label> 
-                        <input type="text" placeholder="Ingrese apellido">
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellido" required>
                     </div>
                     <div class="Input-box"> 
                         <label>Contacto (mail/wpp):</label>
-                        <input type="text" placeholder="Ingrese su e-mail/Whatsapp">
+                        <input type="text" id="mail" name="mail" placeholder="Ingrese su e-mail/Whatsapp" required>
                     </div>
                     <div class="Input-box"> 
                         <label>Estilos:</label>
-                         <select name="Estilos">
+                         <select name="Estilos" id="estilo" name="estilo" required>
                             <option value="A">Loa</option>
                             <option value="B">Fachera</option>
                             <option value="C">Facherita</option>
@@ -171,19 +172,18 @@
                     </div>
                     <div class="Input-box"> 
                         <label>Referencias:</label>
-                        <input type="text" placeholder="Breve descripción flashera de su tatuaje">
+                        <input type="text" id="referencia" name="referencia" placeholder="Breve descripción flashera de su tatuaje" required>
                     </div>
                     <div class="input-imagen">
-                        <input type="file" name="Subir una referencia" accept="image/*">
-
+                        <input type="file" id="referenciaIMG" name="referenciaIMG" accept="image/*">
                     </div>
                     <div class="Input-box"> 
                         <label>Tamaño:</label>
-                        <input type="text" placeholder="El tamaño no es lo más importante">
+                        <input type="text" id="tamanioCM" name="tamanioCM" placeholder="Ingrese el tamaño deseado en CM" required>
                     </div>
                     <div class="Input-box"> 
                         <label>Zona del Cuerpo:</label>
-                        <input type="text" placeholder="En donde usted quiera UwU">
+                        <input type="text" id="zonaCuerpo" name="zonaCuerpo" placeholder="En donde usted quiera UwU" required>
                     </div>
                     <div class="boton-form">
                         <button type="submit" value="Registro"> Registro</button>

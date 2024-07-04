@@ -873,7 +873,7 @@ html{
     box-shadow:0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-#turno-form{
+.turno-form{
     height: 100%;
 }
 .Input-box{
