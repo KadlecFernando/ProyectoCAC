@@ -56,7 +56,7 @@
 }
 #pagina-acerca{
     color: gray;
-    animation: color-acerca linear both;
+    animation: colorSeleccionado linear both;
     animation-timeline: scroll(root);
     animation-range: 0 100px;
 }
