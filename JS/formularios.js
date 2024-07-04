@@ -21,8 +21,9 @@ async function crearPersona(formData){
     })
 
     const result = await response.json();
-    idPersona = result.idPersonaAutoincremental
-    return idPersona;
+
+    /* el return era asi de cortito y al pie*/
+    return result.idPersonaAutoincremental;
 }
 
 
@@ -37,15 +38,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         const formData = new FormData(formPresupuesto);
         const persona = buscarPersona(formData.get('nombre'),formData.get('apellido'),formData.get('mail'))
 
-        const idPersona = persona.idPersona;
+        /* le cambie a let, y use la misma dentro del if para que la tome como lo mismo ya sea que existe la persona,
+         o que la crea en el momento (tiene q ser declarada afuera)*/
+
+        let idPersona = persona.idPersona;
 
         if(idPersona === undefined){
-            persona = crearPersona(formData)
+            idPersona = await crearPersona(formData)
         }
 
+        const estiloSelect = document.getElementById('estilo'); // Obtener el elemento select
+        const estiloSeleccionadoTexto = estiloSelect.options[estiloSelect.selectedIndex].text;
+
         const data = {
-            idPersona: persona.idPersona,
-            estilo: formData.get('estilo'),
+            idPersona: idPersona,
+            estilo: estiloSeleccionadoTexto,
             referencia: formData.get('referencia'),
             zonaCuerpo: formData.get('zonaCuerpo'),
             tamanioCM: formData.get('tamanioCM'),
