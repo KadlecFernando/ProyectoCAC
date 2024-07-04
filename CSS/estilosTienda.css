@@ -327,20 +327,21 @@
 }
 
 .tituloTienda{
-    margin-top: 7%;
+    margin-top: 5vw;
     width: 90%;
-    height: auto;
+    height: 3vw;
     display: flex;
     justify-content: center;
-
+    align-items: flex-start;
     background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)); /* Degradado blanco a transparente */
     border-radius: 50px; /* Bordes redondeados */
     padding: 20px; /* Espacio interno para el contenido (opcional) */
+    margin-bottom: 2vw;
 }
 
 .tienda h1{
-
-    font-size: clamp(3em, 4vw, 5em);
+    margin-top: 1%;
+    font-size: clamp(3em, 3vw, 5em);
     /* font-family: "Cutive Mono", monospace;  */
     font-family: "Oooh Baby", cursive;
     font-weight: 400;
@@ -444,7 +445,7 @@
 }
 
 .detalleProducto img{
-    height: 50%;
+    height: 90%;
     width: 100%;
 }
 
@@ -457,9 +458,10 @@
 }
 
 .divPrecio{
+    margin-top: -1.5vw;
     width: 100%;
     height: 10%;
-    margin-bottom: 3vw;
+    margin-bottom: 0.2vw;
 }
 
 .nombreProducto{
