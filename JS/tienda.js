@@ -9,10 +9,13 @@ async function cargarFiltros(ulFiltros){
     filtros.forEach(filtro => {
         const li = document.createElement('li')
         li.innerHTML = `
-            <li onclick="" data-idTipo = ${filtro.idTipo} > ${filtro.descripcion} </li>
+            <li class="filtrosLi" data-id-tipo = ${filtro.idTipo} > ${filtro.descripcion} </li>
             `
         ulFiltros.appendChild(li)
     })
+    
+    const eventFiltrar = new CustomEvent('filtrar');
+    document.dispatchEvent(eventFiltrar);
 }
 
 async function cargarProductos(gridProductos, esPorTipo, idTipo) {
@@ -23,7 +26,6 @@ async function cargarProductos(gridProductos, esPorTipo, idTipo) {
        response = await fetch(`http://localhost:8080/productos/productostipo/${idTipo}`)   
     }
 
-    alert('Llegue')
     const productos = await response.json()
 
     gridProductos.innerHTML = ''
@@ -57,7 +59,7 @@ async function cargarProductos(gridProductos, esPorTipo, idTipo) {
 
         gridProductos.appendChild(div)
 
-    });
+    })
 
     const eventCantidad = new CustomEvent('manejoCantidades');
     const eventComprar = new CustomEvent('comprar');
@@ -74,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cargarFiltros(ulFiltros)
     
-    cargarProductos(gridProductos,true,1)
+    cargarProductos(gridProductos)
 
 
 })
