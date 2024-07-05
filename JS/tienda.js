@@ -1,7 +1,7 @@
 
 
 async function cargarFiltros(ulFiltros){
-    const response = await fetch('https://back-end-cac.vercel.app/tiposproductos')
+    const response = await fetch('http://localhost:8080/tiposproductos')
     const filtros = await response.json()
     
     ulFiltros.innerHTML = ''
@@ -20,10 +20,10 @@ async function cargarFiltros(ulFiltros){
 
 async function cargarProductos(gridProductos, esPorTipo, idTipo) {
 
-    let response = await fetch('https://back-end-cac.vercel.app/productos');
+    let response = await fetch('http://localhost:8080/productos');
 
     if (esPorTipo === true){
-       response = await fetch(`https://back-end-cac.vercel.app/productos/productostipo/${idTipo}`)   
+       response = await fetch(`http://localhost:8080/productos/productostipo/${idTipo}`)   
     }
 
     const productos = await response.json()
