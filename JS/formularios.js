@@ -3,8 +3,29 @@ async function buscarPersona(nombre,apellido,mail){
     /*   alert(`http://localhost:3000/personas/${nombre}/${apellido}/${mail}`) */ 
     const response = await fetch(`http://localhost:3000/personas/${nombre}/${apellido}/${mail}`)
     const persona = await response.json()
-    return persona
+    return persona;
 }
+
+async function crearPersona(formData){
+    const dataPersona = {
+        nombre: formData.get('nombre'),
+        apellido: formData.get('apellido'),
+        mail: formData.get('mail'),
+        whatsapp: null /*Habria que cambiar en la DB y poner un solo campo contacto con mail/wpp*/
+    }
+
+    const response = await fetch('http://localhost:3000/personas/',{
+        method: 'POST',
+        headers:{'Content-type':'application/json'},
+        body: JSON.stringify(dataPersona)
+    })
+
+    const result = await response.json();
+
+    /* el return era asi de cortito y al pie*/
+    return result.idPersonaAutoincremental;
+}
+
 
 document.addEventListener('DOMContentLoaded',()=>{
 
@@ -17,31 +38,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         const formData = new FormData(formPresupuesto);
         const persona = buscarPersona(formData.get('nombre'),formData.get('apellido'),formData.get('mail'))
 
-        const idPersona = persona.get('idPersona');
+        /* le cambie a let, y use la misma dentro del if para que la tome como lo mismo ya sea que existe la persona,
+         o que la crea en el momento (tiene q ser declarada afuera)*/
 
+        let idPersona = persona.idPersona;
 
-        if(idPersona === null){
-            const dataPersona = {
-                nombre: formData.get('nombre'),
-                apellido: formData.get('apellido'),
-                mail: formData.get('mail'),
-                whatsapp: null /*Habria que cambiar en la DB y poner un solo campo contacto con mail/wpp*/
-            }
-
-            const response = await fetch('http://localhost:3000/personas',{
-                method: 'POST',
-                headers:{'Content-type':'application/json'},
-                body: JSON.stringify(dataPersona)
-            })
-
-            const result = await response.json();
-            idPersona = result.get('idPersonaAutoincremental')
+        if(idPersona === undefined){
+            idPersona = await crearPersona(formData)
         }
 
-        alert('Llegueeeeeeeee')
+        const estiloSelect = document.getElementById('estilo'); // Obtener el elemento select
+        const estiloSeleccionadoTexto = estiloSelect.options[estiloSelect.selectedIndex].text;
+
         const data = {
             idPersona: idPersona,
-            estilo: formData.get('estilo'),
+            estilo: estiloSeleccionadoTexto,
             referencia: formData.get('referencia'),
             zonaCuerpo: formData.get('zonaCuerpo'),
             tamanioCM: formData.get('tamanioCM'),
