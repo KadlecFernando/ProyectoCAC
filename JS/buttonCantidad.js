@@ -1,17 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const quantityInput = document.querySelector('.buttonCantidad-input');
-    const minusBtn = document.querySelector('.minus-btn');
-    const plusBtn = document.querySelector('.plus-btn');
-  
-    minusBtn.addEventListener('click', function() {
-      // Decrementar el valor del input si es mayor que 1
-      if (parseInt(quantityInput.value) > 1) {
-        quantityInput.value = parseInt(quantityInput.value) - 1;
-      }
-    });
-  
-    plusBtn.addEventListener('click', function() {
-      // Incrementar el valor del input
-      quantityInput.value = parseInt(quantityInput.value) + 1;
-    });
+  function setupButtonEvents() {
+      const quantityInputs = document.querySelectorAll('.buttonCantidad-input');
+      const minusBtns = document.querySelectorAll('.minus-btn');
+      const plusBtns = document.querySelectorAll('.plus-btn');
+
+      minusBtns.forEach((minusBtn, index) => {
+          minusBtn.addEventListener('click', function() {
+              const quantityInput = quantityInputs[index];
+              if (parseInt(quantityInput.value) > 1) {
+                  quantityInput.value = parseInt(quantityInput.value) - 1;
+              }
+          });
+      });
+
+      plusBtns.forEach((plusBtn, index) => {
+          plusBtn.addEventListener('click', function() {
+              const quantityInput = quantityInputs[index];
+              quantityInput.value = parseInt(quantityInput.value) + 1;
+          });
+      });
+  }
+
+  setupButtonEvents();
+
+  document.addEventListener('productosCargados', setupButtonEvents);
 });

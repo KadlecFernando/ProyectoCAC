@@ -30,9 +30,16 @@ async function cargarProductos(gridProductos) {
 
                  </div>
         `
+
         gridProductos.appendChild(div)
+
     });
+
+    const event = new CustomEvent('productosCargados');
+    document.dispatchEvent(event);
+    
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
