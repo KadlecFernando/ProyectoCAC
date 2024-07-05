@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Loa</title>
-    <link rel="icon" type="image/png" href="./Imagenes/iconLimon.png" >
+    <link rel="icon" type="image/png" href="./Imagenes/iconLimon.png">
     <link rel="stylesheet" href="./CSS/estilosContacto.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,121 +18,128 @@
 
 <body class="principal">
     <header class="header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./Imagenes/logoNegro.png" id="logoNegro" alt="Home">
-                </a> 
-                <a href="index.html">
-                    <img src="./Imagenes/logoBlanco.png" id="logoBlanco" alt="Home">
-                </a>
-            </div>
-             <nav> 
-                <ul class="ListaCompleta">
-                    <li class="ElementoLista"><a href="Acerca.html">Acerca</a></li>
-                  
-                    <li id="pagina-contacto" class="ElementoLista">  <a href="Contacto.html">Contacto</a></li>
-                    
-                    <li class="ElementoLista"><a href="Tienda.html">Tienda</a></li>
-                </ul>
-            </nav>
-            <div class="sociales"> 
-                <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a>  
-            </div>  
-            <input type="checkbox" id="toggle" hidden>
-            <label for="toggle" class="menu-hamburguesa">
-                 <div class="barra"></div>
-                 <div class="barra"></div>
-                 <div class="barra"></div>
-            </label>
-            <div id="submenu" class="submenu">
-                <ul>
-                    <li><a href="./Acerca.html">Acerca</a></li>
-                    <li><a href="./Contacto.html">Contacto</a></li>
-                    <li><a href="./Tienda.html">Tienda</a></li>
-                </ul>
-                <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i class="GGinstagram"></i></a> 
-                <script src="./JS/logica.js"></script>
-            </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./Imagenes/logoNegro.png" id="logoNegro" alt="Home">
+            </a>
+            <a href="index.html">
+                <img src="./Imagenes/logoBlanco.png" id="logoBlanco" alt="Home">
+            </a>
+        </div>
+        <nav>
+            <ul class="ListaCompleta">
+                <li class="ElementoLista"><a href="Acerca.html">Acerca</a></li>
+
+                <li id="pagina-contacto" class="ElementoLista"> <a href="Contacto.html">Contacto</a></li>
+
+                <li class="ElementoLista"><a href="Tienda.html">Tienda</a></li>
+            </ul>
+        </nav>
+        <div class="sociales">
+            <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i
+                    class="GGinstagram"></i></a>
+        </div>
+        <input type="checkbox" id="toggle" hidden>
+        <label for="toggle" class="menu-hamburguesa">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+        </label>
+        <div id="submenu" class="submenu">
+            <ul>
+                <li><a href="./Acerca.html">Acerca</a></li>
+                <li><a href="./Contacto.html">Contacto</a></li>
+                <li><a href="./Tienda.html">Tienda</a></li>
+            </ul>
+            <a class="socialesLoa" href="https://www.instagram.com/loaloa.tt/" target="_blank"> <i
+                    class="GGinstagram"></i></a>
+            <script src="./JS/logica.js"></script>
+            <script src="./JS/formularios.js"></script>
+
+        </div>
     </header>
     <main>
 
-        <section class="tiendaTurno">    
-                <div id= "contenedorMensaje" class="turno">
-                    <form class="turno-form">
-                        <h2>Envíanos un mensaje</h2>
-                    <div class="Input-box"> 
-                        <label>Nombre:</label> 
-                        <input type="text" placeholder="Ingrese nombre">
+        <section class="tiendaTurno">
+            <div id="contenedorMensaje" class="turno">
+                <form class="turno-form" id="formMensaje" enctype="multipart/form-data">
+                    <h2>Envíanos un mensaje</h2>
+                    <div class="Input-box">
+                        <label>Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre">
                     </div>
-                    <div class="Input-box"> 
-                        <label>Apellido:</label> 
-                        <input type="text" placeholder="Ingrese apellido">
+                    <div class="Input-box">
+                        <label>Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellido">
                     </div>
-                    <div class="Input-box"> 
+                    <div class="Input-box">
                         <label>Contacto (mail/wpp):</label>
-                        <input type="text" placeholder="Ingrese su e-mail/Whatsapp">
+                        <input type="text" id="mail" name="mail" placeholder="Ingrese su e-mail/Whatsapp">
                     </div>
-                    <div class="Input-box"> 
+                    <div class="Input-box">
                         <label>Mensaje:</label>
-                         <textarea id="campoTexto" placeholder="Escriba su consulta"></textarea>
+                        <textarea id="campoTexto" id="mensaje" name="mensaje"
+                            placeholder="Escriba su consulta"></textarea>
                     </div>
                     <div class="boton-form">
                         <button type="submit" value="Registro"> Registro</button>
                     </div>
 
-                    </form>
-                </div>
+                </form>
+            </div>
             </div>
 
             <div class="contenedorTurno">
                 <div class="turno">
-                    <form class="turno-form" id="formPresupuesto">
-                        <h2 >Consultar Presupuesto</h2>
-                    <div class="Input-box"> 
-                        <label>Nombre:</label> 
-                        <input type="text" placeholder="Ingrese nombre">
-                    </div>
-                    <div class="Input-box"> 
-                        <label>Apellido:</label> 
-                        <input type="text" placeholder="Ingrese apellido">
-                    </div>
-                    <div class="Input-box"> 
-                        <label>Contacto (mail/wpp):</label>
-                        <input type="text" placeholder="Ingrese su e-mail/Whatsapp">
-                    </div>
-                    <div class="Input-box"> 
-                        <label>Estilos:</label>
-                         <select name="Estilos">
-                            <option value="A">Loa</option>
-                            <option value="B">Fachera</option>
-                            <option value="C">Facherita</option>
-                         </select>
-                    </div>
-                    <div class="Input-box"> 
-                        <label>Referencias:</label>
-                        <input type="text" placeholder="Breve descripción flashera de su tatuaje">
-                    </div>
-                    <div class="input-imagen">
-                        <input type="file" name="Subir una referencia" accept="image/*">
-
-                    </div>
-                    <div class="Input-box"> 
-                        <label>Tamaño:</label>
-                        <input type="text" placeholder="Ingrese el tamaño deseado en CM">
-                    </div>
-                    <div class="Input-box"> 
-                        <label>Zona del Cuerpo:</label>
-                        <input type="text" placeholder="En donde usted quiera UwU">
-                    </div>
-                    <div class="boton-form">
-                        <button type="submit" value="Registro"> Registro</button>
-                    </div>
+                    <form class="turno-form" id="formPresupuesto" enctype="multipart/form-data">
+                        <h2>Consultar Presupuesto</h2>
+                        <div class="Input-box">
+                            <label>Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre" required>
+                        </div>
+                        <div class="Input-box">
+                            <label>Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellido" required>
+                        </div>
+                        <div class="Input-box">
+                            <label>Contacto (mail/wpp):</label>
+                            <input type="text" id="mail" name="mail" placeholder="Ingrese su e-mail/Whatsapp" required>
+                        </div>
+                        <div class="Input-box">
+                            <label>Estilos:</label>
+                            <select name="Estilos" id="estilo" name="estilo" required>
+                                <option value="A">Fine-Line</option>
+                                <option value="B">Total Black</option>
+                                <option value="C">Colores</option>
+                            </select>
+                        </div>
+                        <div class="Input-box">
+                            <label>Referencias:</label>
+                            <input type="text" id="referencia" name="referencia"
+                                placeholder="Breve descripción flashera de su tatuaje" required>
+                        </div>
+                        <div class="input-imagen">
+                            <input type="file" id="referenciaIMG" name="referenciaIMG" accept="image/*">
+                        </div>
+                        <div class="Input-box">
+                            <label>Tamaño:</label>
+                            <input type="text" id="tamanioCM" name="tamanioCM"
+                                placeholder="Ingrese el tamaño deseado en CM" required>
+                        </div>
+                        <div class="Input-box">
+                            <label>Zona del Cuerpo:</label>
+                            <input type="text" id="zonaCuerpo" name="zonaCuerpo" placeholder="En donde usted quiera UwU"
+                                required>
+                        </div>
+                        <div class="boton-form">
+                            <button type="submit" value="Registro"> Registro</button>
+                        </div>
 
                     </form>
                 </div>
             </div>
         </section>
-        
+
     </main>
     <footer class="estilosFooter">
         <div class="contenedorListasFooter">
@@ -158,6 +166,7 @@
         </div>
 
     </footer>
-    
+
 </body>
+
 </html>
