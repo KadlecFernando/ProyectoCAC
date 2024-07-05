@@ -26,7 +26,7 @@ async function cargarProductos(gridProductos) {
                         <button class="btn plus-btn">+</button>
                     </div>
 
-                    <button class="buttonComprar">Comprar</button>
+                    <button class="buttonComprar" data-producto-id="${producto.idProducto}">Comprar</button>
 
                  </div>
         `
@@ -35,9 +35,10 @@ async function cargarProductos(gridProductos) {
 
     });
 
-    const event = new CustomEvent('productosCargados');
-    document.dispatchEvent(event);
-    
+    const eventCantidad = new CustomEvent('manejoCantidades');
+    const eventComprar = new CustomEvent('comprar');
+    document.dispatchEvent(eventCantidad);
+    document.dispatchEvent(eventComprar);
 }
 
 
@@ -50,4 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-/*Agregar NO HAY STOCK*/
+/*Agregar Compra o NO HAY STOCK*/
+
+.addEventListener('click', async (e) => {
+
+})
+
+/*Filtros categorias*/

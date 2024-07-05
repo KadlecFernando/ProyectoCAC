@@ -23,5 +23,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setupButtonEvents();
 
-  document.addEventListener('productosCargados', setupButtonEvents);
+  document.addEventListener('manejoCantidades', setupButtonEvents);
 });
