@@ -57,7 +57,9 @@
             <!--Los script van en el body-->
             <script src="./JS/logica.js"></script>
             <script src="./JS/tienda.js"></script>
+            <script src="./JS/eventoFiltros.js"></script>
             <script src="./JS/buttonCantidad.js"></script>
+
         </div>
     </header>
     <main>
@@ -68,10 +70,11 @@
             <div class="contenedorTienda">
                 <div class="filtros">
                     <h2>Categorias</h2>
-                    <ul id="ulFiltros"> <!--Acá iria cargado de la DB*/-->
-                        <li onclick="">Insumos</li>
-                        <li onclick="">Indumentaria</li>
-                        <li onclick="">Accesorios</li>
+                    <ul class="ulFiltros">
+                        <li id="liTodas"><a href="Tienda.html">Todas</a></li>
+                    </ul>
+                    <ul class="ulFiltros" id="ulFiltros"> <!--Acá iria cargado de la DB*/-->
+                        
                     </ul>
                 </div>
                 <div class="productos" id="gridProductos" name="gridProductos">
