@@ -1,11 +1,10 @@
 async function buscarPersona(nombre, apellido, mail) {
     /* http://localhost:3000 ahi iria el url de donde este subido el proyecto*/
     /*   alert(`http://localhost:3000/personas/${nombre}/${apellido}/${mail}`) */
-    alert(`https://back-end-cac.vercel.app/personas/${nombre}/${apellido}/${mail}`)
     const response = await fetch(`https://back-end-cac.vercel.app/personas/${nombre}/${apellido}/${mail}`)
 
     const persona = await response.json()
-    alert(persona)
+    
     return persona;
 }
 
@@ -76,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault()
         const formData = new FormData(formPresupuesto);
         const persona = buscarPersona(formData.get('nombre'), formData.get('apellido'), formData.get('mail'))
-        alert(persona.idPersona)
+    
         /* le cambie a let, y use la misma dentro del if para que la tome como lo mismo ya sea que existe la persona,
          o que la crea en el momento (tiene q ser declarada afuera)*/
 
