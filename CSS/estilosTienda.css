@@ -327,7 +327,7 @@
 }
 
 .tituloTienda{
-    margin-top: 5%;
+    margin-top: 6.5%;
     width: 90%;
     height: 3vw;
     display: flex;
@@ -367,7 +367,7 @@
     font-family: "Zen Maru Gothic", serif;
     background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)); /* Degradado blanco a transparente */
     border-radius: 15px; /* Bordes redondeados */
-    padding: 20px; /* Espacio interno para el contenido (opcional) */
+    padding: 3%; /* Espacio interno para el contenido (opcional) */
     float: left; /* Colocar a la izquierda */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave (opcional) */
 }
@@ -375,7 +375,6 @@
 .productos{
     width: 84%;
     height: 100%;
-
     background-color: rgba(255, 245, 219, 0.9); /* Fondo con transparencia */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -385,14 +384,14 @@
 
 
 .filtros h2{
-    font-size: calc(1.5vw + .6em);
+    font-size: calc(1.2vw + .6em);
 }
 
 .ulFiltros{
-    font-size: calc(1vw + .7em);
+    font-size: calc(0.5vw + .7em);
     list-style-type: none;
     margin: 2%;
-    padding: 15px 20px;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -585,8 +584,23 @@
 }
 
 @media (width < 900px){
+.filtros{
+    margin-right: 2%;
+    padding: 1%;
+    padding-right: 6%;
+}
+.ulFiltros{
+    padding: 1%;
+}
+.ulFiltros li{
+    overflow: hidden;
+}
+.ulFiltros li:hover{
+    white-space: normal; /* Muestra todo el texto cuando el usuario pasa el cursor */
+    overflow: visible; /* Muestra el texto completo */
+    text-overflow: unset; /* Elimina los puntos suspensivos */
+}
 
-    
 .productos{
     display: grid;
     grid-template-columns: repeat(
@@ -600,7 +614,7 @@
 }
 
     .tituloTienda{
-        margin-top: 25%;
+        margin-top: 15%;
         width: 90%;
         height: 3vw;
         display: flex;
