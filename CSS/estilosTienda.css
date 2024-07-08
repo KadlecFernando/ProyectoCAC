@@ -466,14 +466,10 @@
     margin-bottom: 0.2vw;
 }
 
+
 .nombreProducto{
     font-family: "Zen Maru Gothic", serif;
     font-size: clamp(0.8em, 1.5vw, 3em);
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
-
-.nombreProducto{
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     overflow: hidden; /* Oculta el texto que desborda del contenedor */
     text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto desborda */
