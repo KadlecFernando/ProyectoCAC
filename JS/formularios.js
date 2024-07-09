@@ -1,12 +1,28 @@
 async function buscarPersona(nombre, apellido, mail) {
-    /* http://localhost:3000 ahi iria el url de donde este subido el proyecto*/
-    /*   alert(`http://localhost:3000/personas/${nombre}/${apellido}/${mail}`) */
-    const response = await fetch(`http://localhost:8080/personas/${nombre}/${apellido}/${mail}`)
+    const url = `http://localhost:8080/personas/${nombre}/${apellido}/${mail}`;
+    console.log('URL de la solicitud:', url);
 
-    const persona = await response.json()
-    alert(persona)
-    return persona;
+    try {
+        const response = await fetch(url);
+
+        if (response.ok) {
+            const personas = await response.json(); // Convertir el JSON a un array de personas
+            if (personas.length > 0) {
+                const persona = personas[0]; // Obtener el primer elemento del array
+                return persona;
+            } else {
+                return null;
+            }
+        } else {
+            console.log('Error en la solicitud:', response.status);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error al realizar la solicitud:', error);
+        return null;
+    }
 }
+
 
 async function crearPersona(formData) {
     const dataPersona = {
@@ -40,16 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         e.preventDefault()
         const formData = new FormData(formMensaje);
-        const persona = buscarPersona(formData.get('nombre'), formData.get('apellido'), formData.get('mail'))
+        let persona = await buscarPersona(formData.get('nombre'), formData.get('apellido'), formData.get('mail'))
 
         /* le cambie a let, y use la misma dentro del if para que la tome como lo mismo ya sea que existe la persona,
          o que la crea en el momento (tiene q ser declarada afuera)*/
 
-        let idPersona = persona.idPersona;
+        let idPersona;
 
-        if (idPersona === undefined) {
-            idPersona = await crearPersona(formData)
+        if (persona) {
+            // Si se encontró persona, obtenemos su id
+            idPersona = persona.idPersona;
+
+        } else {
+            // Si no se encontró persona, creamos una nueva
+            idPersona = await crearPersona(formData);
         }
+
+        // alert(`ID de la persona: ${idPersona}`);
 
         const data = {
             idPersona: idPersona,
