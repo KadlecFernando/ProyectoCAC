@@ -97,20 +97,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         e.preventDefault()
         const formData = new FormData(formPresupuesto);
-        let persona = buscarPersona(formData.get('nombre'), formData.get('apellido'), formData.get('mail'))
+        let persona = await buscarPersona(formData.get('nombre'), formData.get('apellido'), formData.get('mail'))
+
         /* le cambie a let, y use la misma dentro del if para que la tome como lo mismo ya sea que existe la persona,
          o que la crea en el momento (tiene q ser declarada afuera)*/
 
-         let idPersona;
+        let idPersona;
 
-         if (persona) {
-             // Si se encontró persona, obtenemos su id
-             idPersona = persona.idPersona;
- 
-         } else {
-             // Si no se encontró persona, creamos una nueva
-             idPersona = await crearPersona(formData);
-         }
+        if (persona) {
+            // Si se encontró persona, obtenemos su id
+            idPersona = persona.idPersona;
+
+        } else {
+            // Si no se encontró persona, creamos una nueva
+            idPersona = await crearPersona(formData);
+        }
+
+        // alert(`ID de la persona: ${idPersona}`);
 
         const estiloSelect = document.getElementById('estilo'); // Obtener el elemento select
         const estiloSeleccionadoTexto = estiloSelect.options[estiloSelect.selectedIndex].text;
