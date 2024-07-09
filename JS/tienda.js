@@ -20,7 +20,7 @@ async function cargarFiltros(ulFiltros){
 
 async function cargarProductos(gridProductos, esPorTipo, idTipo) {
 
-    let response = await fetch('hhttps://back-end-cac.vercel.app/productos');
+    let response = await fetch('https://back-end-cac.vercel.app/productos');
 
     if (esPorTipo === true){
        response = await fetch(`https://back-end-cac.vercel.app/productos/productostipo/${idTipo}`)   
